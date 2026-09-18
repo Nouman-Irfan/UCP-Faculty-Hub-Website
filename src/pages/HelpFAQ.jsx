@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm'
 
 const HelpFAQ = () => {
   return (
@@ -232,6 +233,8 @@ const HelpFAQ = () => {
         </div>
 
       </section>
+
+      <ContactForm />
 
     </main>
   )
