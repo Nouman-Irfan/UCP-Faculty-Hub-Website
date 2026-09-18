@@ -113,24 +113,26 @@ const Home = () => {
 
             </div>
 
-
-            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-300 hover:shadow-md">
+            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 font-bold text-amber-700">
-                Q
+                ?
               </div>
 
               <h3 className="text-lg font-semibold">
-                QuickFind
+                Help & FAQ
               </h3>
 
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Quickly find faculty members and academic information.
+                Find answers to common questions quickly.
               </p>
 
-              <p className="mt-4 text-sm font-semibold text-blue-700">
-                Search Quickly →
-              </p>
+              <a
+                href="/help&faq"
+                className="mt-4 inline-block text-sm font-semibold text-blue-700"
+              >
+                View FAQs →
+              </a>
 
             </div>
 
