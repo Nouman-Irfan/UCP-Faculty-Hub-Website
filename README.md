@@ -1,15 +1,13 @@
-# UCP-Faculty-Hub-Website
-🎓 **UCP Faculty Hub Website** is a modern React-based academic directory for the University of Central Punjab. 👨‍🏫 Explore faculty profiles, departments, Deans &amp; HODs, research interests, and contact details through a clean, responsive interface built with ⚛️ React, JavaScript, and Tailwind CSS.
 <div align="center">
 
 <img src="./public/assets/branding/ucp-faculty-hub-logo.png" alt="UCP Faculty Hub Logo" width="250" />
 
-# 🎓 UCP Faculty Hub Website
+# 🎓 UCP Faculty Hub
 
 ### Explore. Connect. Discover.
 
 <img
-  src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&pause=1200&color=2563EB&center=true&vCenter=true&width=700&lines=Explore+UCP+Faculty+Members;Discover+Academic+Departments;Meet+Deans+%26+Heads+of+Departments;Academic+Information+in+One+Organized+Platform"
+  src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&pause=1200&color=2563EB&center=true&vCenter=true&width=700&lines=Explore+UCP+Faculty+Members;Discover+Academic+Departments;Meet+Deans+%26+HODs;Academic+Information+in+One+Place"
   alt="UCP Faculty Hub Animation"
 />
 
@@ -19,43 +17,84 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Styling-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-Navigation-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-Contact_Form-FFB400?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-</div>
-
----
-
-<div align="center">
+<br/>
 
 ## 🌐 Visit Website
 
-[![Visit UCP Faculty Hub](https://img.shields.io/badge/Visit%20Live%20Website-UCP%20Faculty%20Hub-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://ucp-facultyhub.vercel.app/)
+[![Visit UCP Faculty Hub](https://img.shields.io/badge/Visit%20Website-UCP%20Faculty%20Hub-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://ucp-facultyhub.vercel.app/)
 
-**🔗 [UCP Faculty Hub — Explore. Connect. Discover.](https://ucp-facultyhub.vercel.app/)**
+**[UCP Faculty Hub — Explore. Connect. Discover.](https://ucp-facultyhub.vercel.app/)**
 
 </div>
 
 ---
 
-## 🌟 About UCP Faculty Hub
+# 🚀 Quick Start
 
-**UCP Faculty Hub** is a modern academic directory designed to make faculty information from the **University of Central Punjab** easier to explore.
+Clone the repository:
 
-Instead of searching through multiple university pages, students can use one organized interface to discover:
+```bash
+git clone https://github.com/Nouman-Irfan/UCP-Faculty-Hub-Website.git
+```
+
+Open the project:
+
+```bash
+cd UCP-Faculty-Hub-Website
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file in the project root:
+
+```env
+VITE_SERVICE_ID=your_service_id
+VITE_TEMPLATE_ID=your_template_id
+VITE_PUBLIC_KEY=your_public_key
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will provide a local development URL such as:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🌟 About the Project
+
+**UCP Faculty Hub** is a student-developed academic directory designed to make University of Central Punjab faculty information easier to explore.
+
+Instead of searching through multiple university pages, students can use one organized platform to discover:
 
 - 👨‍🏫 Faculty members
 - 🏛️ Academic faculties
 - 📚 Departments
-- 🎓 Deans & Heads of Departments
+- 🎓 Deans, Associate Deans & HODs
 - 🔬 Research interests
 - 📧 Available contact information
 - 🔗 Official faculty profile links
+- ❓ Help & frequently asked questions
+- ✉️ Contact and feedback form
 
-The website focuses on a clean academic design, simple navigation, reusable React components, responsive layouts, and easy-to-understand search and filtering.
+The project focuses on clean design, simple navigation, reusable React components, responsive layouts and easy-to-understand functionality.
 
 ---
 
-## ✨ Main Features
+# ✨ Main Features
 
 <table>
 <tr>
@@ -64,18 +103,14 @@ The website focuses on a clean academic design, simple navigation, reusable Reac
 
 ### 👨‍🏫 Faculty Directory
 
-Search and explore faculty records through an organized directory.
-
-**Features**
-
-- Search by faculty member name
+- Search by name
 - Search by designation
 - Search by department
 - Search by research interest
-- Filter by academic faculty
+- Filter by faculty
 - Filter by department
-- View detailed faculty profiles
-- Official UCP profile links
+- View detailed profiles
+- Official profile links
 - Image fallback support
 
 </td>
@@ -84,12 +119,8 @@ Search and explore faculty records through an organized directory.
 
 ### 🏛️ Department Directory
 
-Browse academic departments through a dedicated department directory.
-
-**Features**
-
+- Browse departments
 - Search departments
-- Search by faculty name
 - Custom department badges
 - Dynamic department routes
 - Department-specific faculty listings
@@ -105,13 +136,9 @@ Browse academic departments through a dedicated department directory.
 
 ### 🎓 Academic Leadership
 
-Dedicated page for academic leadership.
-
-**Includes**
-
 - Deans
 - Associate Deans
-- Heads of Departments
+- HODs
 - Search functionality
 - Role-based filtering
 - Detailed profile modal
@@ -120,19 +147,47 @@ Dedicated page for academic leadership.
 
 <td width="50%" valign="top">
 
+### ❓ Help & FAQ
+
+- Dedicated Help Center
+- Six common questions
+- Interactive dropdown answers
+- Native HTML accordion behavior
+- No complicated JavaScript required
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+### ✉️ Contact Form
+
+- Name field
+- Email field
+- Subject field
+- Message field
+- EmailJS integration
+- Sending status
+- Success message
+- Error handling
+- Automatic form reset after success
+
+</td>
+
+<td width="50%" valign="top">
+
 ### 📱 Responsive Interface
 
-The website adapts across different screen sizes using Tailwind CSS.
-
-**Responsive areas**
-
-- Navigation
-- Hero section
+- Responsive layouts
 - Faculty grids
 - Department grids
-- Faculty badges
 - Profile modal
-- About page
+- Academic faculty badges
+- Hero section
+- Navigation
 - Footer
 
 </td>
@@ -142,7 +197,7 @@ The website adapts across different screen sizes using Tailwind CSS.
 
 ---
 
-## 📊 Platform Overview
+# 📊 Platform Overview
 
 <div align="center">
 
@@ -154,140 +209,94 @@ The website adapts across different screen sizes using Tailwind CSS.
 
 ---
 
-## 🏠 Home Page
+# 🏠 Main Pages
 
-The homepage introduces the UCP Faculty Hub through a modern academic landing experience.
+## Home
 
-### Home includes
+The homepage introduces the platform through:
 
-- 🌇 UCP campus hero image
-- 🎯 Faculty directory call-to-action
-- 🏛️ Department directory call-to-action
-- 📊 Platform statistics
-- 🎓 Academic faculty showcase
-- ⭐ Popular departments
-- 🧭 Main navigation
-- 📌 Project footer
-
-### Hero Experience
-
-The hero section combines:
-
-```text
-UCP Campus Background
-        ↓
-Dark Gradient Overlay
-        ↓
-Main Heading
-        ↓
-Supporting Description
-        ↓
-Explore Faculty + View Departments
-```
-
-It creates a clear first impression while keeping the UCP campus visible.
+- UCP campus hero section
+- Faculty and department CTAs
+- Platform statistics
+- Academic faculty badges
+- Popular departments
+- Quick access cards
+- Help & FAQ access
 
 ---
 
 ## 👨‍🏫 Faculty Directory
 
-The Faculty page contains the main searchable directory.
+The Faculty page provides the main searchable directory.
 
-Users can search through fields such as:
+Users can search by:
 
 ```text
 Name
 Designation
 Department
 Faculty
-Research Interests
+Research Interest
 ```
 
-### Search Flow
+Users can also filter records by academic faculty and department.
+
+### Faculty Search Flow
 
 ```text
-User Types Search
-        ↓
-search state updates
-        ↓
+Search Input
+    ↓
+useState
+    ↓
 facultyData.filter()
-        ↓
-Matching records remain
-        ↓
-.map()
-        ↓
-FacultyCard displayed
+    ↓
+Matching Records
+    ↓
+FacultyCard
 ```
-
-### Faculty Filters
-
-Users can also filter by:
-
-- 🎓 Academic Faculty
-- 🏢 Department
-
-Search and filters work together so users can narrow down results easily.
 
 ---
 
-## 🪪 Faculty Profile Modal
+## 🪪 Faculty Profiles
 
-Clicking **View Profile** opens a reusable faculty profile modal.
+Selecting **View Profile** opens the reusable `FacultyModal`.
 
-Depending on available information, the modal may display:
+Depending on available information, profiles can include:
 
-- 👤 Faculty image
-- 📝 Name
-- 💼 Designation
-- 🏢 Department
-- 🎓 Faculty
-- 📧 Email
-- ☎️ Office extension
-- 🎓 Education
-- 🔬 Research interests
-- 🔗 Official UCP profile
-
-If an image is unavailable, a fallback placeholder is displayed automatically.
+- Faculty image
+- Name
+- Designation
+- Department
+- Faculty
+- Email
+- Office extension
+- Education
+- Research interests
+- Official UCP profile
 
 ---
 
 ## 🏛️ Departments
 
-The Departments page automatically builds a unique department directory from the main faculty dataset.
+The Departments page automatically creates a unique list of departments from the main faculty dataset.
 
-### Working Flow
+### Department Flow
 
 ```text
 facultyData
-     ↓
+    ↓
 forEach()
-     ↓
-Read person's department
-     ↓
+    ↓
 some()
-     ↓
-Check if department already exists
-     ↓
-push()
-     ↓
-Add only unique departments
-     ↓
+    ↓
+Unique Departments
+    ↓
 filter()
-     ↓
-Search departments
-     ↓
-map()
-     ↓
+    ↓
 DepartmentCard
 ```
 
-This prevents duplicate departments from appearing.
-
----
-
-## 🔗 Dynamic Department Pages
-
-Each department has its own dynamic route.
+Each department can be opened through a dynamic route.
 
 Example:
 
@@ -295,61 +304,44 @@ Example:
 /departments/faculty-of-information-technology-and-computer-science-computer-science
 ```
 
-The route is defined using:
-
-```jsx
-<Route
-  path="/departments/:departmentId"
-  element={<DepartmentDetails />}
-/>
-```
-
-The department ID is accessed using:
-
-```js
-useParams()
-```
-
 ---
 
 ## 📘 Department Details
 
-The Department Details page finds all people belonging to the selected department.
+Each department page displays:
 
-### Flow
+- Department name
+- Parent faculty
+- Department badge
+- Directory records
+- Research profiles
+- Faculty members connected with the department
+
+### Working Flow
 
 ```text
 Department URL
-      ↓
+    ↓
 useParams()
-      ↓
+    ↓
 departmentId
-      ↓
+    ↓
 facultyData.filter()
-      ↓
-departmentPeople
-      ↓
+    ↓
+Department Members
+    ↓
 FacultyCard
-      ↓
+    ↓
 FacultyModal
 ```
-
-The page can display:
-
-- 🏢 Department name
-- 🎓 Parent faculty
-- 🖼️ Department badge
-- 👥 Directory records
-- 🔬 Research profiles
-- 👨‍🏫 People associated with the department
 
 ---
 
 ## 🎓 Deans & HODs
 
-The Academic Leadership page first extracts leadership records from the main dataset.
+The Academic Leadership page extracts leadership records from the main dataset.
 
-### Supported Roles
+Supported roles:
 
 ```text
 Dean
@@ -357,34 +349,78 @@ Associate Dean
 HOD
 ```
 
-### Leadership Flow
-
-```text
-facultyData
-      ↓
-filter()
-      ↓
-Dean / Associate Dean / HOD
-      ↓
-Search Filter
-      ↓
-Role Filter
-      ↓
-FacultyCard
-      ↓
-FacultyModal
-```
-
-Users can search using:
-
-- Name
-- Designation
-- Department
-- Faculty
+Users can search and filter leadership records before opening detailed profiles.
 
 ---
 
-## 🏫 Academic Faculties
+## ❓ Help & FAQ
+
+The Help Center provides quick answers to common questions about the platform.
+
+It uses native HTML:
+
+```html
+<details>
+  <summary>Question</summary>
+  Answer
+</details>
+```
+
+This provides dropdown functionality without requiring separate JavaScript state for every question.
+
+The page currently includes six FAQs covering:
+
+- What UCP Faculty Hub is
+- How to find faculty members
+- Browsing by department
+- Data sources
+- Project status
+- Missing profile information
+
+---
+
+## ✉️ Contact Form
+
+The Help & FAQ page also contains a contact form powered by **EmailJS**.
+
+Users can submit:
+
+```text
+Name
+Email
+Subject
+Message
+```
+
+### Contact Form Flow
+
+```text
+User fills form
+      ↓
+Submit
+      ↓
+status = "sending"
+      ↓
+EmailJS
+      ↓
+Success / Error
+      ↓
+Status message shown
+```
+
+React `useState` is used to display:
+
+```text
+Sending...
+✓ Message sent successfully!
+Message could not be sent. Please try again.
+```
+
+After successful submission, the form resets automatically.
+
+---
+
+# 🏫 Academic Faculties
 
 The platform includes information from nine UCP faculties:
 
@@ -398,169 +434,62 @@ The platform includes information from nine UCP faculties:
 8. 💊 Faculty of Pharmaceutical Sciences
 9. 🔬 Faculty of Science & Technology
 
-The Home page presents these through custom faculty badge artwork.
-
 ---
 
-## 🧩 Reusable Components
+# 🧩 Main React Components
 
-One of the main goals of the project is to avoid repeating the same UI code.
-
-### `FacultyCard.jsx`
-
-Used on:
-
-```text
-Faculty Page
-Department Details
-Deans & HODs
-```
-
-Displays:
-
-- Faculty image
-- Name
-- Designation
-- Department
-- Faculty
-- View Profile button
-
----
-
-### `FacultyModal.jsx`
-
-Reusable profile popup used across multiple pages.
-
----
-
-### `DepartmentCard.jsx`
-
-Displays department information and links to the correct dynamic department page.
-
----
-
-### `FacultyBadges.jsx`
-
-Displays the nine academic faculties on the homepage.
-
----
-
-### `Hero.jsx`
-
-Contains the main campus hero section and primary navigation actions.
-
----
-
-### `StatsSection.jsx`
-
-Displays:
-
-```text
-569 Directory Records
-41 Departments
-9 Academic Faculties
-```
-
----
-
-### `PopularDepartments.jsx`
-
-Highlights selected departments from the academic directory.
-
----
-
-## 🔄 Component Reusability
-
-```text
-                FacultyCard
-                    │
-        ┌───────────┼───────────┐
-        ↓           ↓           ↓
-     Faculty    Department   Deans & HODs
-      Page       Details        Page
-
-
-                FacultyModal
-                    │
-        ┌───────────┼───────────┐
-        ↓           ↓           ↓
-     Faculty    Department   Leadership
-      Page       Details        Page
-```
-
-This keeps the interface consistent and reduces duplicate code.
-
----
-
-## 🔍 Search System
-
-The application uses standard JavaScript array methods.
-
-```js
-filter()
-map()
-some()
-forEach()
-includes()
-```
-
-Example faculty search logic:
-
-```js
-const filteredFaculty = facultyData.filter(person => {
-
-  const searchText = search.toLowerCase()
-
-  const matchesSearch =
-    person.name.toLowerCase().includes(searchText) ||
-    person.designation.toLowerCase().includes(searchText) ||
-    person.department.toLowerCase().includes(searchText) ||
-    (person.researchInterests || []).some(interest =>
-      interest.toLowerCase().includes(searchText)
-    )
-
-  return matchesSearch
-})
-```
-
-This allows the interface to update instantly as users search.
-
----
-
-## 🧠 JavaScript Methods Used
-
-| Method | Purpose |
+| Component | Purpose |
 |---|---|
-| `forEach()` | Goes through every array item |
-| `some()` | Checks whether at least one item matches |
-| `push()` | Adds an item to an array |
-| `filter()` | Creates an array of matching records |
-| `map()` | Displays UI for every record |
-| `includes()` | Checks whether text contains search text |
-| `toLowerCase()` | Makes search case-insensitive |
+| `Navbar.jsx` | Main website navigation |
+| `Hero.jsx` | Homepage hero section |
+| `StatsSection.jsx` | Platform statistics |
+| `FacultyBadges.jsx` | Academic faculty showcase |
+| `PopularDepartments.jsx` | Popular department section |
+| `FacultyCard.jsx` | Reusable faculty profile card |
+| `FacultyModal.jsx` | Detailed faculty popup |
+| `DepartmentCard.jsx` | Department card |
+| `ContactForm.jsx` | EmailJS contact form |
+| `Footer.jsx` | Website footer |
+
+### Component Reusability
+
+```text
+FacultyCard
+   ├── Faculty Page
+   ├── Department Details
+   └── Deans & HODs
+
+FacultyModal
+   ├── Faculty Page
+   ├── Department Details
+   └── Academic Leadership
+```
 
 ---
 
-## ⚛️ React Concepts Used
+# ⚛️ React Concepts Used
 
 The project demonstrates:
 
-- ⚛️ React Components
-- 📦 Props
-- 🧠 `useState`
-- 🧭 `useParams`
-- 🔀 React Router
-- 🔍 Search filtering
-- 🎯 Conditional rendering
-- 🖱️ Event handling
-- ♻️ Component reusability
-- 🧩 Dynamic routes
-- 📱 Responsive design
-- 🖼️ Image fallback handling
+- React components
+- Props
+- `useState`
+- `useRef`
+- `useParams`
+- React Router
+- Dynamic routes
+- Conditional rendering
+- Event handling
+- Form submission
+- Search and filtering
+- Component reusability
+- Environment variables
+- Responsive design
+- Image fallback handling
 
 ---
 
-## 🛠️ Technology Stack
+# 🛠️ Technology Stack
 
 <div align="center">
 
@@ -571,13 +500,15 @@ The project demonstrates:
 | ⚡ **Vite** | Development and build environment |
 | 🎨 **Tailwind CSS** | Styling and responsive layouts |
 | 🧭 **React Router** | Client-side navigation |
+| ✉️ **EmailJS** | Contact form email delivery |
+| ▲ **Vercel** | Website deployment |
 | 📦 **npm** | Dependency management |
 
 </div>
 
 ---
 
-## 🧭 Application Routes
+# 🧭 Application Routes
 
 | Route | Page |
 |---|---|
@@ -586,19 +517,18 @@ The project demonstrates:
 | `/departments` | 🏛️ Departments |
 | `/departments/:departmentId` | 📘 Department Details |
 | `/deans-hods` | 🎓 Deans & HODs |
+| `/help&faq` | ❓ Help & FAQ |
 | `/about` | ℹ️ About |
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```text
 UCP-Faculty-Hub-Website/
 │
 ├── public/
-│   │
 │   └── assets/
-│       │
 │       ├── branding/
 │       │   ├── favicon.png
 │       │   └── ucp-faculty-hub-logo.png
@@ -616,6 +546,7 @@ UCP-Faculty-Hub-Website/
 ├── src/
 │   │
 │   ├── components/
+│   │   ├── ContactForm.jsx
 │   │   ├── DepartmentCard.jsx
 │   │   ├── FacultyBadges.jsx
 │   │   ├── FacultyCard.jsx
@@ -635,191 +566,139 @@ UCP-Faculty-Hub-Website/
 │   │   ├── DepartmentDetails.jsx
 │   │   ├── Departments.jsx
 │   │   ├── Faculty.jsx
+│   │   ├── HelpFAQ.jsx
 │   │   └── Home.jsx
 │   │
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
 │
+├── .env.example
+├── .gitignore
 ├── index.html
 ├── package.json
 ├── package-lock.json
+├── vercel.json
 ├── vite.config.js
 └── README.md
 ```
 
 ---
 
-## 🖼️ Image Handling
+# ⚙️ Environment Variables
 
-Faculty images use fallback handling to prevent broken profile images.
+EmailJS configuration is handled through environment variables.
 
-```jsx
-<img
-  src={person.image || "/assets/placeholders/faculty-placeholder.png"}
-  alt={person.name}
-  onError={(e) => {
-    e.currentTarget.src =
-      "/assets/placeholders/faculty-placeholder.png"
-  }}
-/>
+Create a `.env` file using `.env.example`:
+
+```env
+VITE_SERVICE_ID=your_service_id
+VITE_TEMPLATE_ID=your_template_id
+VITE_PUBLIC_KEY=your_public_key
 ```
 
-If the original profile image cannot be loaded:
+The project accesses them through:
+
+```js
+import.meta.env.VITE_SERVICE_ID
+import.meta.env.VITE_TEMPLATE_ID
+import.meta.env.VITE_PUBLIC_KEY
+```
+
+For deployment, the same variables are configured in **Vercel Environment Variables**.
+
+The real `.env` file is not committed to the repository.
+
+---
+
+# ✉️ EmailJS Integration
+
+The contact form uses:
+
+```js
+emailjs.sendForm()
+```
+
+The form fields correspond with the EmailJS template variables:
 
 ```text
-Official Image
-      ↓
-Loading fails
-      ↓
-onError()
-      ↓
-Faculty Placeholder
+{{name}}
+{{email}}
+{{subject}}
+{{message}}
 ```
+
+This allows users to send questions, feedback and suggestions directly through the website without requiring a custom backend.
 
 ---
 
-## ▶️ How to Run the Project
-
-### 1️⃣ Requirements
-
-Make sure you have:
+# ⚙️ Overall Application Flow
 
 ```text
-Node.js
-npm
-```
+                         UCP Faculty Hub
+                                │
+          ┌─────────────────────┼─────────────────────┐
+          │                     │                     │
+          ▼                     ▼                     ▼
+   Faculty Directory       Departments          Leadership
+          │                     │                     │
+          ▼                     ▼                     ▼
+    Search / Filter       Dynamic Routes        Role Filter
+          │                     │                     │
+          └──────────────┬──────┴──────────────┬─────┘
+                         │                     │
+                         ▼                     ▼
+                    FacultyCard           FacultyModal
 
-installed on your computer.
 
----
-
-### 2️⃣ Open the Project Folder
-
-Open the project using **Visual Studio Code** or another code editor.
-
----
-
-### 3️⃣ Install Dependencies
-
-Open the terminal inside the project folder and run:
-
-```bash
-npm install
-```
-
-This installs the packages required by the application.
-
----
-
-### 4️⃣ Start the Development Server
-
-Run:
-
-```bash
-npm run dev
-```
-
-Vite will start the development server.
-
-You will see a local address similar to:
-
-```text
-http://localhost:5173
-```
-
-Open it in your browser.
-
----
-
-### 5️⃣ Create a Production Build
-
-To generate the optimized production files:
-
-```bash
-npm run build
-```
-
-The generated build will be placed inside:
-
-```text
-dist/
+                    Help & FAQ
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        FAQ Dropdowns          Contact Form
+                                     │
+                                     ▼
+                                  EmailJS
+                                     │
+                                     ▼
+                                   Email
 ```
 
 ---
 
-## ⚙️ Application Working Flow
+# 🎨 User Interface
 
-```text
-                    ┌──────────────────────┐
-                    │    facultyData.js    │
-                    │ Single Data Source   │
-                    └──────────┬───────────┘
-                               │
-           ┌───────────────────┼───────────────────┐
-           │                   │                   │
-           ▼                   ▼                   ▼
-   Faculty Directory      Departments       Academic Leadership
-           │                   │                   │
-           ▼                   ▼                   ▼
-      Search/Filter       Unique Dept List     Role Filtering
-           │                   │                   │
-           ▼                   ▼                   ▼
-      FacultyCard        DepartmentCard       FacultyCard
-           │                   │                   │
-           │                   ▼                   │
-           │           DepartmentDetails          │
-           │                   │                   │
-           └──────────────┬────┴────┬──────────────┘
-                          │         │
-                          ▼         ▼
-                     FacultyCard  FacultyModal
-```
+The website follows a consistent academic visual style:
 
----
-
-## 🎨 User Interface Design
-
-The project uses a consistent visual language based around:
-
-- 🔵 UCP-inspired blue accents
-- ⚪ Clean white surfaces
+- 🔵 Blue primary accents
+- ⚪ Clean white backgrounds
 - ⚫ Slate typography
 - 🟡 Small amber highlights
-- 🖼️ Academic imagery
 - 🎓 Faculty and department badges
+- 🖼️ Academic imagery
 - ✨ Subtle hover animations
-
-Interactive elements use transitions such as:
-
-```text
-Card lift
-Image scale
-Text color transition
-Arrow movement
-Shadow transition
-Button hover
-```
-
-These interactions are intentionally subtle so the interface remains professional.
+- 📱 Responsive layouts
+- 🔄 Smooth transitions
+- 💬 Interactive FAQ dropdowns
+- ✉️ Styled contact form
 
 ---
 
-## 📚 Data Information
+# 📚 Data Information
 
-The faculty directory is built using publicly available University of Central Punjab information.
+The faculty directory is based on publicly available University of Central Punjab information.
 
-The project avoids intentionally inventing information that was not publicly available.
+The project avoids intentionally inventing unavailable information.
 
-Because availability differs between profiles, some records may contain more details than others.
+Because public information differs between profiles, some faculty records contain more details than others.
 
 ---
 
-## ⚠️ Disclaimer
+# ⚠️ Disclaimer
 
-> This website is a **student academic project** and is not presented as the official University of Central Punjab website.
+> UCP Faculty Hub is a **student academic project** and is not presented as the official University of Central Punjab website.
 
-University names, faculty information, images, branding references, and related content belong to their respective owners.
+University names, faculty information, images, branding references and related content belong to their respective owners.
 
 ---
 
@@ -827,7 +706,10 @@ University names, faculty information, images, branding references, and related 
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=18&pause=1500&color=2563EB&center=true&vCenter=true&width=500&lines=Explore.+Connect.+Discover.;Built+for+Academic+Discovery." alt="Footer Animation" />
+<img
+  src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=18&pause=1500&color=2563EB&center=true&vCenter=true&width=520&lines=Explore.+Connect.+Discover.;Built+for+Academic+Discovery."
+  alt="Footer Animation"
+/>
 
 ### 🎓 UCP Faculty Hub
 
@@ -839,10 +721,6 @@ University names, faculty information, images, branding references, and related 
 
 <br/>
 
-**React** · **JavaScript** · **Vite** · **Tailwind CSS**
-
-<br/>
-
-⭐ **Explore the project and discover the UCP academic community.**
+**React · JavaScript · Vite · Tailwind CSS · EmailJS · Vercel**
 
 </div>
