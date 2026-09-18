@@ -6,6 +6,7 @@ import Faculty from './pages/Faculty'
 import Departments from './pages/Departments'
 import DepartmentDetails from './pages/DepartmentDetails'
 import DeansHODs from './pages/DeansHODs'
+import HelpFAQ from './pages/HelpFAQ'
 import About from './pages/About'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/departments' element={<Departments />} />
           <Route path='/departments/:departmentId' element={<DepartmentDetails />} />
           <Route path='/deans-hods' element={<DeansHODs />} />
+          <Route path="/help&faq" element={<HelpFAQ />} />
           <Route path='/about' element={<About />} />
         </Routes>
       </main>
