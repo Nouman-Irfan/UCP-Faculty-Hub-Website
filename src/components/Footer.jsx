@@ -123,7 +123,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
-          © 2026 UCP Faculty Hub. All Rights Reserved.
+          Copyright © 2026 UCP Faculty Hub. All Rights Reserved.
         </p>
 
       </div>
