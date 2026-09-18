@@ -25,6 +25,18 @@
 
 ---
 
+<div align="center">
+
+## 🌐 Visit Website
+
+[![Visit UCP Faculty Hub](https://img.shields.io/badge/Visit%20Live%20Website-UCP%20Faculty%20Hub-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://ucp-facultyhub.vercel.app/)
+
+**🔗 [UCP Faculty Hub — Explore. Connect. Discover.](https://ucp-facultyhub.vercel.app/)**
+
+</div>
+
+---
+
 ## 🌟 About UCP Faculty Hub
 
 **UCP Faculty Hub** is a modern academic directory designed to make faculty information from the **University of Central Punjab** easier to explore.
