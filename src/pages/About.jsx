@@ -190,7 +190,7 @@ const About = () => {
             <div className="border-l-4 border-blue-600 pl-5">
 
               <p className="text-lg font-semibold">
-                Muhammad Nouman
+                Aqsa Ismail
               </p>
 
               <p className="mt-1 text-sm text-slate-500">
@@ -203,7 +203,7 @@ const About = () => {
             <div className="border-l-4 border-blue-600 pl-5">
 
               <p className="text-lg font-semibold">
-                Aqsa Ismail
+                Muhammad Nouman
               </p>
 
               <p className="mt-1 text-sm text-slate-500">
