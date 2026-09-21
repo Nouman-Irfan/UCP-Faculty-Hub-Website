@@ -18,8 +18,10 @@ const Footer = () => {
             />
 
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-400">
-              A student-focused platform for exploring UCP faculty members,
-              departments and academic leadership.
+              A student-focused platform for exploring
+              UCP faculty members, departments,
+              and academic leadership across the university.
+              Discover, connect, and learn with ease.
             </p>
 
           </div>
