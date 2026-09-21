@@ -1,9 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { motion } from 'motion/react'
 
 const DepartmentCard = ({ department }) => {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      whileHover={{ y: -5 }}
+      className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:border-blue-200 hover:shadow-lg"
+    >
 
       <div className="flex items-center gap-5 border-b border-slate-100 bg-slate-50 p-5">
 
@@ -52,7 +60,7 @@ const DepartmentCard = ({ department }) => {
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 
