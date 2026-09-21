@@ -573,6 +573,7 @@ UCP-Faculty-Hub-Website/
 │   ├── index.css
 │   └── main.jsx
 │
+├── .env
 ├── .env.example
 ├── .gitignore
 ├── index.html
