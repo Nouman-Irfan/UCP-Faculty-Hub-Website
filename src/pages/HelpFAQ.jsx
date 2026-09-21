@@ -222,7 +222,7 @@ const HelpFAQ = () => {
 
             <div className="ml-10 mt-5 border-t border-slate-100 pt-5">
               <p className="leading-7 text-slate-600">
-                Some information may not be publicly available. Because of
+                Some information may not be publicly available or currently listed. Because of
                 this, the amount of information shown can vary between
                 different faculty profiles.
               </p>
