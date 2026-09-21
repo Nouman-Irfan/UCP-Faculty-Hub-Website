@@ -106,11 +106,11 @@ const Footer = () => {
                 </p>
 
                 <p className="mt-1">
-                  Muhammad Nouman
-                </p>
-
-                <p>
                   Aqsa Ismail
+                </p>
+                Muhammad Nouman
+                <p>
+
                 </p>
               </div>
 
