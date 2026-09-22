@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import facultyData from '../data/facultyData'
 import FacultyCard from '../components/FacultyCard'
 import FacultyModal from '../components/FacultyModal'
+import { motion } from 'motion/react'
 
 const Faculty = () => {
   const [search, setSearch] = useState('')
@@ -49,7 +50,15 @@ const Faculty = () => {
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
 
-          <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut'
+            }}
+            className="max-w-2xl"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               UCP FACULTY DIRECTORY
@@ -64,7 +73,7 @@ const Faculty = () => {
               academic roles and available profile information.
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
       </section>
@@ -74,7 +83,16 @@ const Faculty = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-8">
 
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.99 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.12,
+              ease: 'easeOut'
+            }}
+            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+          >
 
             <div className="mb-5 flex items-center justify-between">
 
@@ -91,7 +109,9 @@ const Faculty = () => {
               </div>
 
 
-              <button
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => {
                   setSearch('')
                   setFaculty('All')
@@ -100,7 +120,7 @@ const Faculty = () => {
                 className="rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
               >
                 Clear Filters
-              </button>
+              </motion.button>
 
             </div>
 
@@ -171,7 +191,7 @@ const Faculty = () => {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -180,7 +200,16 @@ const Faculty = () => {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
 
-        <div className="mb-7">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            ease: 'easeOut'
+          }}
+          className="mb-7"
+        >
 
           <h2 className="text-2xl font-bold text-slate-900">
             Faculty Directory
@@ -190,7 +219,7 @@ const Faculty = () => {
             Showing {filteredFaculty.length} results
           </p>
 
-        </div>
+        </motion.div>
 
 
         {filteredFaculty.length > 0 ? (
@@ -198,18 +227,38 @@ const Faculty = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
             {filteredFaculty.map((person) => (
-              <FacultyCard
+
+              <motion.div
                 key={person.id}
-                person={person}
-                onViewProfile={setSelectedPerson}
-              />
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.4,
+                  ease: 'easeOut'
+                }}
+                whileHover={{ y: -4 }}
+              >
+
+                <FacultyCard
+                  person={person}
+                  onViewProfile={setSelectedPerson}
+                />
+
+              </motion.div>
+
             ))}
 
           </div>
 
         ) : (
 
-          <div className="rounded-xl border border-slate-200 bg-white py-16 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="rounded-xl border border-slate-200 bg-white py-16 text-center"
+          >
 
             <h3 className="text-xl font-semibold text-slate-900">
               No faculty found
@@ -219,7 +268,7 @@ const Faculty = () => {
               Try changing your search or filters.
             </p>
 
-          </div>
+          </motion.div>
 
         )}
 
