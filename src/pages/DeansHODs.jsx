@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import facultyData from '../data/facultyData'
 import FacultyCard from '../components/FacultyCard'
 import FacultyModal from '../components/FacultyModal'
+import { motion } from 'motion/react'
 
 const DeansHODs = () => {
   const [search, setSearch] = useState('')
@@ -39,7 +40,15 @@ const DeansHODs = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-12">
 
-          <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut'
+            }}
+            className="max-w-2xl"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               ACADEMIC LEADERSHIP
@@ -54,7 +63,7 @@ const DeansHODs = () => {
               Associate Deans and Heads of Departments.
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -65,7 +74,16 @@ const DeansHODs = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-8">
 
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.99 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.12,
+              ease: 'easeOut'
+            }}
+            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+          >
 
             <div className="mb-5 flex items-center justify-between">
 
@@ -87,7 +105,7 @@ const DeansHODs = () => {
                   setSearch('')
                   setSelectedRole('All')
                 }}
-                className="rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-700"
+                className="rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
               >
                 Clear Filters
               </button>
@@ -100,7 +118,7 @@ const DeansHODs = () => {
               placeholder="Search by name, faculty or department..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-blue-500"
+              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
             />
 
 
@@ -111,7 +129,7 @@ const DeansHODs = () => {
                 className={
                   selectedRole === 'All'
                     ? 'rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white'
-                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50'
+                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50'
                 }
               >
                 All
@@ -123,7 +141,7 @@ const DeansHODs = () => {
                 className={
                   selectedRole === 'Dean'
                     ? 'rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white'
-                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50'
+                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50'
                 }
               >
                 Deans
@@ -135,7 +153,7 @@ const DeansHODs = () => {
                 className={
                   selectedRole === 'Associate Dean'
                     ? 'rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white'
-                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50'
+                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50'
                 }
               >
                 Associate Deans
@@ -147,7 +165,7 @@ const DeansHODs = () => {
                 className={
                   selectedRole === 'HOD'
                     ? 'rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white'
-                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-50'
+                    : 'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50'
                 }
               >
                 HODs
@@ -155,7 +173,7 @@ const DeansHODs = () => {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -164,7 +182,16 @@ const DeansHODs = () => {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
 
-        <div className="mb-7">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.25,
+            ease: 'easeOut'
+          }}
+          className="mb-7"
+        >
 
           <p className="text-sm font-semibold text-blue-700">
             LEADERSHIP DIRECTORY
@@ -178,26 +205,42 @@ const DeansHODs = () => {
             Showing {filteredLeaders.length} results
           </p>
 
-        </div>
+        </motion.div>
 
 
         {filteredLeaders.length > 0 ? (
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-            {filteredLeaders.map((person) => (
-              <FacultyCard
+            {filteredLeaders.map((person, index) => (
+              <motion.div
                 key={person.id}
-                person={person}
-                onViewProfile={setSelectedPerson}
-              />
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.45,
+                  delay: (index % 3) * 0.08,
+                  ease: 'easeOut'
+                }}
+              >
+                <FacultyCard
+                  person={person}
+                  onViewProfile={setSelectedPerson}
+                />
+              </motion.div>
             ))}
 
           </div>
 
         ) : (
 
-          <div className="rounded-xl border border-slate-200 bg-white py-16 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="rounded-xl border border-slate-200 bg-white py-16 text-center"
+          >
 
             <h3 className="text-xl font-semibold text-slate-900">
               No leaders found
@@ -207,7 +250,7 @@ const DeansHODs = () => {
               Try changing your search or role filter.
             </p>
 
-          </div>
+          </motion.div>
 
         )}
 

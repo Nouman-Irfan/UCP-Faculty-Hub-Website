@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router'
 import facultyData from '../data/facultyData'
 import FacultyCard from '../components/FacultyCard'
 import FacultyModal from '../components/FacultyModal'
+import { motion } from 'motion/react'
 
 const DepartmentDetails = () => {
   const { departmentId } = useParams()
@@ -19,20 +20,37 @@ const DepartmentDetails = () => {
 
         <section className="mx-auto max-w-6xl px-6 py-20 text-center">
 
-          <h1 className="text-3xl font-bold text-slate-900">
-            Department Not Found
-          </h1>
-
-          <p className="mt-3 text-slate-500">
-            The department you are looking for could not be found.
-          </p>
-
-          <Link
-            to="/departments"
-            className="mt-6 inline-block rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut'
+            }}
           >
-            Back to Departments
-          </Link>
+
+            <h1 className="text-3xl font-bold text-slate-900">
+              Department Not Found
+            </h1>
+
+            <p className="mt-3 text-slate-500">
+              The department you are looking for could not be found.
+            </p>
+
+            <motion.div
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-6 inline-block"
+            >
+              <Link
+                to="/departments"
+                className="inline-block rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+              >
+                Back to Departments
+              </Link>
+            </motion.div>
+
+          </motion.div>
 
         </section>
 
@@ -56,17 +74,37 @@ const DepartmentDetails = () => {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
 
-        <Link
-          to="/departments"
-          className="text-sm font-semibold text-blue-700 hover:text-blue-900"
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: 'easeOut'
+          }}
         >
-          ← Back to Departments
-        </Link>
+
+          <Link
+            to="/departments"
+            className="text-sm font-semibold text-blue-700 transition hover:text-blue-900"
+          >
+            ← Back to Departments
+          </Link>
+
+        </motion.div>
 
 
         <div className="mt-6 grid gap-5 md:grid-cols-3">
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.08,
+              ease: 'easeOut'
+            }}
+            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:col-span-2"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               UCP DEPARTMENT
@@ -93,10 +131,19 @@ const DepartmentDetails = () => {
 
             </div>
 
-          </div>
+          </motion.div>
 
 
-          <div className="flex min-h-64 items-center justify-center rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.15,
+              ease: 'easeOut'
+            }}
+            className="flex min-h-64 items-center justify-center rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
+          >
 
             <img
               src={departmentImage}
@@ -104,10 +151,18 @@ const DepartmentDetails = () => {
               className="max-h-52 w-full object-contain"
             />
 
-          </div>
+          </motion.div>
 
 
-          <div className="rounded-2xl border border-slate-200 bg-blue-50 p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2
+            }}
+            className="rounded-2xl border border-slate-200 bg-blue-50 p-6"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               DIRECTORY
@@ -121,10 +176,18 @@ const DepartmentDetails = () => {
               Directory Records
             </p>
 
-          </div>
+          </motion.div>
 
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.27
+            }}
+            className="rounded-2xl border border-slate-200 bg-white p-6"
+          >
 
             <p className="text-sm font-semibold text-slate-500">
               RESEARCH
@@ -138,10 +201,18 @@ const DepartmentDetails = () => {
               Profiles with Research Interests
             </p>
 
-          </div>
+          </motion.div>
 
 
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.34
+            }}
+            className="rounded-2xl border border-amber-200 bg-amber-50 p-6"
+          >
 
             <p className="text-sm font-semibold text-amber-700">
               EXPLORE
@@ -156,7 +227,7 @@ const DepartmentDetails = () => {
               connected with this department.
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -167,7 +238,16 @@ const DepartmentDetails = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-12">
 
-          <div className="mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeOut'
+            }}
+            className="mb-8"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               DEPARTMENT DIRECTORY
@@ -181,7 +261,7 @@ const DepartmentDetails = () => {
               Showing {departmentPeople.length} records
             </p>
 
-          </div>
+          </motion.div>
 
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

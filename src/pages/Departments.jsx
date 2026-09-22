@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import facultyData from '../data/facultyData'
 import DepartmentCard from '../components/DepartmentCard'
+import { motion } from 'motion/react'
 
 const Departments = () => {
   const [search, setSearch] = useState('')
@@ -44,18 +45,29 @@ const Departments = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-12">
 
-          <p className="text-sm font-semibold text-blue-700">
-            UCP DEPARTMENTS
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut'
+            }}
+          >
 
-          <h1 className="mt-2 text-4xl font-bold text-slate-900">
-            Explore Departments
-          </h1>
+            <p className="text-sm font-semibold text-blue-700">
+              UCP DEPARTMENTS
+            </p>
 
-          <p className="mt-4 max-w-2xl leading-7 text-slate-600">
-            Browse academic departments across UCP and explore the faculty
-            connected with each department.
-          </p>
+            <h1 className="mt-2 text-4xl font-bold text-slate-900">
+              Explore Departments
+            </h1>
+
+            <p className="mt-4 max-w-2xl leading-7 text-slate-600">
+              Browse academic departments across UCP and explore the faculty
+              connected with each department.
+            </p>
+
+          </motion.div>
 
         </div>
 
@@ -66,7 +78,16 @@ const Departments = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-8">
 
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.99 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.55,
+              delay: 0.12,
+              ease: 'easeOut'
+            }}
+            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
+          >
 
             <div className="mb-4 flex items-center justify-between">
 
@@ -83,21 +104,27 @@ const Departments = () => {
               </div>
 
 
-              <button onClick={() => setSearch('')} className="rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-700">
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setSearch('')}
+                className="rounded-md border border-slate-300 px-4 py-2 text-sm text-slate-600 transition hover:bg-blue-50 hover:text-blue-700"
+              >
                 Clear Search
-              </button>
+              </motion.button>
 
             </div>
+
 
             <input
               type="text"
               placeholder="Search department..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none focus:border-blue-500"
+              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
             />
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -106,7 +133,16 @@ const Departments = () => {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
 
-        <div className="mb-7">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.25,
+            ease: 'easeOut'
+          }}
+          className="mb-7"
+        >
 
           <h2 className="text-2xl font-bold text-slate-900">
             Department Directory
@@ -116,7 +152,7 @@ const Departments = () => {
             Showing {filteredDepartments.length} departments
           </p>
 
-        </div>
+        </motion.div>
 
 
         {filteredDepartments.length > 0 ? (

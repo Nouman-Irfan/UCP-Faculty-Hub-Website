@@ -1,12 +1,28 @@
 import React from 'react'
+import { motion } from 'motion/react'
 
 const FacultyCard = ({ person, onViewProfile }) => {
   return (
-    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md">
+    <motion.div
+      whileHover={{ y: -5 }}
+      transition={{
+        type: 'spring',
+        stiffness: 300,
+        damping: 22
+      }}
+      className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:border-blue-200 hover:shadow-md"
+    >
 
-      <div className="flex h-64 items-center justify-center bg-slate-100 p-3">
+      <div className="flex h-64 items-center justify-center overflow-hidden bg-slate-100 p-3">
 
-        <img src={person.image || "/assets/placeholders/faculty-placeholder.png"} alt={person.name} className="h-full w-full object-contain"
+        <motion.img
+          src={person.image || "/assets/placeholders/faculty-placeholder.png"}
+          alt={person.name}
+          className="h-full w-full object-contain"
+          whileHover={{ scale: 1.035 }}
+          transition={{
+            duration: 0.3
+          }}
           onError={(e) => {
             e.currentTarget.src =
               "/assets/placeholders/faculty-placeholder.png"
@@ -34,16 +50,19 @@ const FacultyCard = ({ person, onViewProfile }) => {
           {person.faculty}
         </p>
 
-        <button
+
+        <motion.button
+          whileHover={{ scale: 1.015 }}
+          whileTap={{ scale: 0.97 }}
           onClick={() => onViewProfile(person)}
           className="mt-5 w-full rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
         >
           View Profile
-        </button>
+        </motion.button>
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 
