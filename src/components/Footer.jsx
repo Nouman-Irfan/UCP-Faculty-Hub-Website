@@ -40,7 +40,7 @@ const Footer = () => {
                   to="/"
                   className="transition hover:text-blue-400"
                 >
-                  Home
+                  » Home
                 </Link>
               </li>
 
@@ -49,7 +49,7 @@ const Footer = () => {
                   to="/faculty"
                   className="transition hover:text-blue-400"
                 >
-                  Faculty
+                  » Faculty
                 </Link>
               </li>
 
@@ -58,7 +58,7 @@ const Footer = () => {
                   to="/departments"
                   className="transition hover:text-blue-400"
                 >
-                  Departments
+                  » Departments
                 </Link>
               </li>
 
@@ -67,7 +67,7 @@ const Footer = () => {
                   to="/deans-hods"
                   className="transition hover:text-blue-400"
                 >
-                  Deans & HODs
+                  » Deans & HODs
                 </Link>
               </li>
 
@@ -76,7 +76,7 @@ const Footer = () => {
                   to="/help&faq"
                   className="transition hover:text-blue-400"
                 >
-                  FAQ
+                  »  FAQ
                 </Link>
               </li>
 
@@ -85,7 +85,7 @@ const Footer = () => {
                   to="/about"
                   className="transition hover:text-blue-400"
                 >
-                  About
+                  » About
                 </Link>
               </li>
 
