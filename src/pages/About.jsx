@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'motion/react'
 
 const About = () => {
   return (
@@ -8,42 +9,81 @@ const About = () => {
 
         <div className="grid items-center gap-12 md:grid-cols-2">
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
 
             <p className="text-sm font-semibold tracking-wide text-blue-700">
               ABOUT THE PROJECT
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="mt-3 text-4xl font-bold leading-tight"
+            >
               UCP Faculty Hub
-            </h1>
+            </motion.h1>
 
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="mt-5 text-lg leading-8 text-slate-600"
+            >
               UCP Faculty Hub is a student-developed platform created to make
               faculty information easier to explore and understand.
-            </p>
+            </motion.p>
 
-            <p className="mt-4 leading-7 text-slate-600">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mt-4 leading-7 text-slate-600"
+            >
               Instead of searching through different university pages, students
               can browse faculty members, departments and academic leadership
               from one organized place.
-            </p>
+            </motion.p>
 
-            <div className="mt-7 h-1 w-16 bg-amber-400"></div>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 64 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="mt-7 h-1 bg-amber-400"
+            />
 
-          </div>
+          </motion.div>
 
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 35, scale: 0.96 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.015 }}
+          >
 
             <img
-              src="/assets/hero/about.png" alt="UCP Academic Community" className="h-75 w-full rounded-2xl object-cover"/>
+              src="/assets/hero/about.png"
+              alt="UCP Academic Community"
+              className="h-75 w-full rounded-2xl object-cover"
+            />
 
-          </div>
+          </motion.div>
 
         </div>
 
       </section>
+
 
       <section className="border-y border-slate-200 bg-slate-50">
 
@@ -51,7 +91,12 @@ const About = () => {
 
           <div className="grid gap-10 md:grid-cols-2">
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+            >
 
               <p className="text-sm font-semibold text-blue-700">
                 OUR PURPOSE
@@ -61,10 +106,15 @@ const About = () => {
                 Why We Built It
               </h2>
 
-            </div>
+            </motion.div>
 
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
 
               <p className="leading-7 text-slate-600">
                 Faculty information can sometimes be spread across multiple
@@ -77,7 +127,7 @@ const About = () => {
                 departments and leadership connected with their academic life.
               </p>
 
-            </div>
+            </motion.div>
 
           </div>
 
@@ -90,7 +140,12 @@ const About = () => {
 
         <div className="grid gap-12 md:grid-cols-2">
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               WHAT IT OFFERS
@@ -100,9 +155,17 @@ const About = () => {
               Simple Academic Discovery
             </h2>
 
+
             <div className="mt-8 space-y-6">
 
-              <div className="border-l-4 border-blue-600 pl-5">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.1 }}
+                whileHover={{ x: 5 }}
+                className="border-l-4 border-blue-600 pl-5"
+              >
 
                 <h3 className="font-semibold">
                   Faculty Directory
@@ -112,10 +175,17 @@ const About = () => {
                   Browse faculty profiles and available academic information.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div className="border-l-4 border-blue-600 pl-5">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.2 }}
+                whileHover={{ x: 5 }}
+                className="border-l-4 border-blue-600 pl-5"
+              >
 
                 <h3 className="font-semibold">
                   Departments
@@ -125,10 +195,17 @@ const About = () => {
                   Explore departments and the people associated with them.
                 </p>
 
-              </div>
+              </motion.div>
 
 
-              <div className="border-l-4 border-blue-600 pl-5">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: 0.3 }}
+                whileHover={{ x: 5 }}
+                className="border-l-4 border-blue-600 pl-5"
+              >
 
                 <h3 className="font-semibold">
                   Academic Leadership
@@ -138,14 +215,19 @@ const About = () => {
                   Find Deans, HODs and other academic leadership information.
                 </p>
 
-              </div>
+              </motion.div>
 
             </div>
 
-          </div>
+          </motion.div>
 
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               DATA INFORMATION
@@ -165,7 +247,7 @@ const About = () => {
               intentionally guessed or invented.
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -176,18 +258,34 @@ const About = () => {
 
         <div className="mx-auto max-w-6xl px-6 py-14">
 
-          <p className="text-sm font-semibold text-blue-700">
-            PROJECT TEAM
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
 
-          <h2 className="mt-2 text-3xl font-bold">
-            Built By
-          </h2>
+            <p className="text-sm font-semibold text-blue-700">
+              PROJECT TEAM
+            </p>
+
+            <h2 className="mt-2 text-3xl font-bold">
+              Built By
+            </h2>
+
+          </motion.div>
 
 
           <div className="mt-8 grid max-w-3xl gap-8 sm:grid-cols-2">
 
-            <div className="border-l-4 border-blue-600 pl-5">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ x: 5 }}
+              className="border-l-4 border-blue-600 pl-5"
+            >
 
               <p className="text-lg font-semibold">
                 Aqsa Ismail
@@ -197,10 +295,17 @@ const About = () => {
                 Developer
               </p>
 
-            </div>
+            </motion.div>
 
 
-            <div className="border-l-4 border-blue-600 pl-5">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ x: 5 }}
+              className="border-l-4 border-blue-600 pl-5"
+            >
 
               <p className="text-lg font-semibold">
                 Muhammad Nouman
@@ -210,11 +315,18 @@ const About = () => {
                 Developer
               </p>
 
-            </div>
+            </motion.div>
 
           </div>
 
-          <div className="mt-10 border-t border-slate-200 pt-6">
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-10 border-t border-slate-200 pt-6"
+          >
 
             <p className="text-sm text-slate-500">
               Submitted To
@@ -224,7 +336,7 @@ const About = () => {
               Prof. Abdul Rehman Hashmi
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
