@@ -19,7 +19,7 @@ const Footer = () => {
           <div>
 
             <img
-              src="/assets/branding/ucp-faculty-hub-logo.png"
+              src="/assets/branding/ucp-faculty-hub-logo-footer.png"
               alt="UCP Faculty Hub Logo"
               className="h-16 w-auto object-contain"
             />
