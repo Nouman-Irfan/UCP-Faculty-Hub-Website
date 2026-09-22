@@ -37,7 +37,7 @@ const About = () => {
           <div>
 
             <img
-              src="/assets/hero/about.png" alt="UCP Academic Community" className="h-80 w-full rounded-2xl object-cover"/>
+              src="/assets/hero/about.png" alt="UCP Academic Community" className="h-75 w-full rounded-2xl object-cover"/>
 
           </div>
 
