@@ -1,14 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'motion/react'
+
+const Counter = ({ target, start }) => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!start) return
+
+    let current = 0
+    const steps = 50
+    const increment = target / steps
+
+    const timer = setInterval(() => {
+      current += increment
+
+      if (current >= target) {
+        setCount(target)
+        clearInterval(timer)
+      } else {
+        setCount(Math.round(current))
+      }
+    }, 25)
+
+    return () => clearInterval(timer)
+  }, [start, target])
+
+  return count
+}
+
 
 const StatsSection = () => {
+  const [startCount, setStartCount] = useState(false)
+
   return (
-    <section className="bg-white py-16">
+    <motion.section
+      onViewportEnter={() => setStartCount(true)}
+      viewport={{ once: true }}
+      className="bg-white py-16"
+    >
 
       <div className="mx-auto max-w-6xl px-6">
 
         <div className="grid items-center gap-10 lg:grid-cols-5">
 
-          <div className="lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2"
+          >
 
             <div className="flex items-center gap-3">
 
@@ -29,17 +70,23 @@ const StatsSection = () => {
               through the UCP Faculty Hub.
             </p>
 
-          </div>
+          </motion.div>
 
 
           <div className="lg:col-span-3">
 
             <div className="grid grid-cols-1 border-y border-slate-200 sm:grid-cols-3 sm:border-y-0">
 
-              <div className="py-7 sm:border-r sm:border-slate-200 sm:px-7">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="py-7 sm:border-r sm:border-slate-200 sm:px-7"
+              >
 
                 <p className="text-5xl font-bold text-blue-700">
-                  569
+                  <Counter target={569} start={startCount} />
                 </p>
 
                 <p className="mt-3 font-semibold text-slate-900">
@@ -48,13 +95,19 @@ const StatsSection = () => {
 
                 <div className="mt-4 h-1 w-10 rounded-full bg-blue-200"></div>
 
-              </div>
+              </motion.div>
 
 
-              <div className="border-t border-slate-200 py-7 sm:border-r sm:border-t-0 sm:border-slate-200 sm:px-7">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="border-t border-slate-200 py-7 sm:border-r sm:border-t-0 sm:border-slate-200 sm:px-7"
+              >
 
                 <p className="text-5xl font-bold text-slate-900">
-                  41
+                  <Counter target={41} start={startCount} />
                 </p>
 
                 <p className="mt-3 font-semibold text-slate-900">
@@ -63,13 +116,19 @@ const StatsSection = () => {
 
                 <div className="mt-4 h-1 w-10 rounded-full bg-amber-400"></div>
 
-              </div>
+              </motion.div>
 
 
-              <div className="border-t border-slate-200 py-7 sm:border-t-0 sm:px-7">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="border-t border-slate-200 py-7 sm:border-t-0 sm:px-7"
+              >
 
                 <p className="text-5xl font-bold text-slate-900">
-                  9
+                  <Counter target={9} start={startCount} />
                 </p>
 
                 <p className="mt-3 font-semibold text-slate-900">
@@ -78,7 +137,7 @@ const StatsSection = () => {
 
                 <div className="mt-4 h-1 w-10 rounded-full bg-blue-200"></div>
 
-              </div>
+              </motion.div>
 
             </div>
 
@@ -88,7 +147,7 @@ const StatsSection = () => {
 
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 

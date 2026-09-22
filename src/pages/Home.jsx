@@ -3,6 +3,8 @@ import Hero from '../components/Hero'
 import StatsSection from '../components/StatsSection'
 import FacultyBadges from '../components/FacultyBadges'
 import PopularDepartments from '../components/PopularDepartments'
+import { motion } from 'motion/react'
+import { Link } from 'react-router'
 
 const Home = () => {
   return (
@@ -11,9 +13,19 @@ const Home = () => {
       <Hero />
       <StatsSection />
 
+
       <section className="mx-auto max-w-6xl px-6 py-14">
 
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{
+            duration: 0.6,
+            ease: 'easeOut'
+          }}
+          className="mx-auto max-w-3xl text-center"
+        >
 
           <p className="text-sm font-semibold text-blue-700">
             WELCOME TO UCP FACULTY HUB
@@ -28,9 +40,15 @@ const Home = () => {
             leadership without searching through multiple university pages.
           </p>
 
-          <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-amber-400"></div>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 80 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mx-auto mt-6 h-1 rounded-full bg-amber-400"
+          />
 
-        </div>
+        </motion.div>
 
       </section>
 
@@ -41,7 +59,15 @@ const Home = () => {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45 }}
+              whileHover={{ y: -5 }}
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-md"
+            >
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-700">
                 F
@@ -56,17 +82,24 @@ const Home = () => {
                 information.
               </p>
 
-              <a
-                href="/faculty"
+              <Link
+                to="/faculty"
                 className="mt-4 inline-block text-sm font-semibold text-blue-700"
               >
                 Explore Faculty →
-              </a>
+              </Link>
 
-            </div>
+            </motion.div>
 
 
-            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.08 }}
+              whileHover={{ y: -5 }}
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-md"
+            >
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 font-bold text-indigo-700">
                 D
@@ -80,17 +113,24 @@ const Home = () => {
                 Explore different academic departments across UCP.
               </p>
 
-              <a
-                href="/departments"
+              <Link
+                to="/departments"
                 className="mt-4 inline-block text-sm font-semibold text-blue-700"
               >
                 View Departments →
-              </a>
+              </Link>
 
-            </div>
+            </motion.div>
 
 
-            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.16 }}
+              whileHover={{ y: -5 }}
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-md"
+            >
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 font-bold text-sky-700">
                 H
@@ -104,16 +144,24 @@ const Home = () => {
                 Discover the people leading UCP faculties and departments.
               </p>
 
-              <a
-                href="/deans-hods"
+              <Link
+                to="/deans-hods"
                 className="mt-4 inline-block text-sm font-semibold text-blue-700"
               >
                 View Leadership →
-              </a>
+              </Link>
 
-            </div>
+            </motion.div>
 
-            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, delay: 0.24 }}
+              whileHover={{ y: -5 }}
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-md"
+            >
 
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 font-bold text-amber-700">
                 ?
@@ -127,14 +175,14 @@ const Home = () => {
                 Find answers to common questions quickly.
               </p>
 
-              <a
-                href="/help&faq"
+              <Link
+                to="/help&faq"
                 className="mt-4 inline-block text-sm font-semibold text-blue-700"
               >
                 View FAQs →
-              </a>
+              </Link>
 
-            </div>
+            </motion.div>
 
           </div>
 
@@ -142,11 +190,21 @@ const Home = () => {
 
       </section>
 
+
       <section className="bg-slate-50">
 
         <div className="mx-auto max-w-6xl px-6 py-14">
 
-          <div className="mb-9 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut'
+            }}
+            className="mb-9 text-center"
+          >
 
             <p className="text-sm font-semibold text-blue-700">
               ACADEMIC FACULTIES
@@ -161,23 +219,61 @@ const Home = () => {
               connected with them.
             </p>
 
-          </div>
+          </motion.div>
 
-          <FacultyBadges />
 
-          <div className="mt-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1,
+              ease: 'easeOut'
+            }}
+          >
+            <FacultyBadges />
+          </motion.div>
 
-            <a href="/departments" className="inline-block text-sm font-semibold text-blue-700 hover:text-blue-900">
-              Explore All Departments →
-            </a>
 
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8 text-center"
+          >
+
+            <motion.div
+              whileHover={{ x: 4 }}
+              className="inline-block"
+            >
+              <Link
+                to="/departments"
+                className="text-sm font-semibold text-blue-700 hover:text-blue-900"
+              >
+                Explore All Departments →
+              </Link>
+            </motion.div>
+
+          </motion.div>
 
         </div>
 
       </section>
 
-      <PopularDepartments />
+
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          duration: 0.6,
+          ease: 'easeOut'
+        }}
+      >
+        <PopularDepartments />
+      </motion.div>
 
     </main>
   )
