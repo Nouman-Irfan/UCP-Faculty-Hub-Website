@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router'
+import { motion } from 'motion/react'
 
 const Navbar = () => {
 
@@ -14,12 +15,23 @@ const Navbar = () => {
 
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm">
+    <motion.nav
+      initial={{ opacity: 0, y: -18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        ease: 'easeOut'
+      }}
+      className="sticky top-0 z-50 w-full bg-white shadow-sm">
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         <Link to="/">
-          <img src="/assets/branding/ucp-faculty-hub-logo.png" alt="UCP Faculty Hub Logo" className="h-14 w-auto" />
+          <img
+            src="/assets/branding/ucp-faculty-hub-logo.png"
+            alt="UCP Faculty Hub Logo"
+            className="h-14 w-auto"
+          />
         </Link>
 
 
@@ -63,13 +75,22 @@ const Navbar = () => {
 
         </ul>
 
-        <Link to="/faculty" className="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800">
-          Browse Directory →
-        </Link>
+
+        <motion.div
+          whileHover={{ y: -2, scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          <Link
+            to="/faculty"
+            className="block rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
+          >
+            Browse Directory →
+          </Link>
+        </motion.div>
 
       </div>
 
-    </nav >
+    </motion.nav>
   )
 }
 
