@@ -1235,7 +1235,7 @@ export const facultyData = [
   {
     "id": 8,
     "name": "Dr. Muhammad Umair",
-    "designation": "Associate Professor (On Leave)",
+    "designation": "Associate Professor",
     "faculty": "Faculty of Information Technology and Computer Science",
     "department": "Computer Science",
     "departmentId": "faculty-of-information-technology-and-computer-science-computer-science",
@@ -3602,165 +3602,6 @@ export const facultyData = [
     "sourceUrls": [
       "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
       "https://ucp.edu.pk/member/dr-ghulam-mustafa/"
-    ],
-    "administrativeRoles": [],
-    "aliases": [],
-    "faculties": [
-      "Faculty of Information Technology and Computer Science"
-    ],
-    "departments": [
-      "Computer Science"
-    ],
-    "departmentIds": [
-      "faculty-of-information-technology-and-computer-science-computer-science"
-    ]
-  },
-  {
-    "id": 22,
-    "name": "Dr. M. Umair",
-    "designation": "Assistant Professor",
-    "faculty": "Faculty of Information Technology and Computer Science",
-    "department": "Computer Science",
-    "departmentId": "faculty-of-information-technology-and-computer-science-computer-science",
-    "role": [],
-    "roleLabel": null,
-    "employmentType": "unknown",
-    "employmentEvidence": [],
-    "status": "Current",
-    "listingStatus": "current_listing_confirmed",
-    "recordType": "academic_or_teaching_support",
-    "education": [
-      {
-        "degree": "PhD",
-        "field": "Deep Learning, Computer Vision, Datasets",
-        "institution": "Universiti Teknologi PETRONAS",
-        "year": "2023",
-        "status": "as_published",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/",
-        "sourceSection": "Qualification",
-        "rawFields": [
-          "PhD",
-          "Deep Learning, Computer Vision, Datasets",
-          "Universiti Teknologi PETRONAS",
-          "2023"
-        ],
-        "parsing": "structured_table"
-      },
-      {
-        "degree": "MS (CS)",
-        "field": "Machine Learning",
-        "institution": "Iqra University",
-        "year": "2016",
-        "status": "as_published",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/",
-        "sourceSection": "Qualification",
-        "rawFields": [
-          "MS (CS)",
-          "Machine Learning",
-          "Iqra University",
-          "2016"
-        ],
-        "parsing": "structured_table"
-      }
-    ],
-    "researchInterests": [
-      "the application of efficient deep learning and computer vision techniques in the fields of astronomy",
-      "oceanography",
-      "and renewable energy"
-    ],
-    "courses": [],
-    "courseAssignments": [],
-    "email": "muhammad.umair@ucp.edu.pk",
-    "officeExtension": "142",
-    "image": null,
-    "publishedImageUrl": "Photo not available",
-    "profileUrl": "https://ucp.edu.pk/member/dr-m-umair/",
-    "sourceUrl": "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
-    "profileDesignation": "Assistant Professor",
-    "profileEmail": "muhammad.umair@ucp.edu.pk",
-    "academicLinks": [
-      {
-        "label": "scholar.google.com",
-        "url": "https://scholar.google.com/citations?hl=en&user=o7KxVrgAAAAJ&view_op=list_works&s ortby=pubdate"
-      }
-    ],
-    "experience": [
-      {
-        "position": "Assistant Professor",
-        "institution": "University of Central Punjab",
-        "period": "2023-Till date",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/"
-      },
-      {
-        "position": "Graduate Researcher",
-        "institution": "Universiti Teknologi PETRONAS",
-        "period": "2018-2023",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/"
-      },
-      {
-        "position": "Deputy Director",
-        "institution": "Iqra University",
-        "period": "2017-2018",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/"
-      },
-      {
-        "position": "Senior Manager",
-        "institution": "Lamudi, a venture of Rocket Internet SE",
-        "period": "2014-2017",
-        "sourceUrl": "https://ucp.edu.pk/member/dr-m-umair/"
-      }
-    ],
-    "reviews": [],
-    "availability": {
-      "education": true,
-      "researchInterests": true,
-      "courses": false,
-      "employmentType": "not_verified"
-    },
-    "sources": {
-      "directory": {
-        "url": "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
-        "retrievedAt": "2026-09-16",
-        "matchedCurrentCard": true
-      },
-      "profile": {
-        "url": "https://ucp.edu.pk/member/dr-m-umair/",
-        "retrievedAt": "2026-09-16",
-        "fetchStatus": "ok",
-        "matchMethod": "linked_profile",
-        "availableSections": [
-          "Profile Summary",
-          "Qualification",
-          "Experience",
-          "Publications"
-        ]
-      }
-    },
-    "qualityFlags": [
-      "possible_duplicate_person_requires_confirmation"
-    ],
-    "lastChecked": "2026-09-16",
-    "personGroupId": "possible-muhammad-umair",
-    "originalDirectoryIds": [
-      22
-    ],
-    "affiliations": [
-      {
-        "faculty": "Faculty of Information Technology and Computer Science",
-        "department": "Computer Science",
-        "departmentId": "faculty-of-information-technology-and-computer-science-computer-science",
-        "designation": "Assistant Professor",
-        "role": [],
-        "roleLabel": "",
-        "status": "Current",
-        "email": "muhammad.umair@ucp.edu.pk",
-        "sourceUrl": "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
-        "profileUrl": "https://ucp.edu.pk/member/dr-m-umair/"
-      }
-    ],
-    "sourceUrls": [
-      "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
-      "https://ucp.edu.pk/member/dr-m-umair/"
     ],
     "administrativeRoles": [],
     "aliases": [],
@@ -8989,7 +8830,7 @@ export const facultyData = [
     "email": "beenish.zafar@ucp.edu.pk",
     "officeExtension": null,
     "image": null,
-    "publishedImageUrl": "https://ucp.edu.pk/wp-content/uploads/2023/02/Nazish-Ashfaq.jpg",
+    "publishedImageUrl": "https://ucp.edu.pk/wp-content/uploads/2023/02/Beenish-Zafar.jpg",
     "profileUrl": "https://ucp.edu.pk/member/beenish-zafar/",
     "sourceUrl": "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
     "profileDesignation": "Senior Lecturer",
@@ -14852,7 +14693,7 @@ export const facultyData = [
   {
     "id": 95,
     "name": "Nazish Ashfaq",
-    "designation": "Associate Lecturer (on leave)",
+    "designation": "Associate Lecturer",
     "faculty": "Faculty of Information Technology and Computer Science",
     "department": "Computer Science",
     "departmentId": "faculty-of-information-technology-and-computer-science-computer-science",
@@ -14870,7 +14711,7 @@ export const facultyData = [
     "email": null,
     "officeExtension": null,
     "image": null,
-    "publishedImageUrl": "https://ucp.edu.pk/wp-content/uploads/2023/02/Beenish-Zafar.jpg",
+    "publishedImageUrl": "https://ucp.edu.pk/wp-content/uploads/2023/02/Nazish-Ashfaq.jpg",
     "profileUrl": "https://ucp.edu.pk/member/nazish-ashfaq/",
     "sourceUrl": "https://ucp.edu.pk/faculty-of-information-technology-and-computer-science/faculty-members/",
     "profileDesignation": "Associate Lecturer",
