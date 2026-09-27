@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Faculty from './pages/Faculty'
 import Departments from './pages/Departments'
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className='flex min-h-screen flex-col'>
       <Navbar />
+      <ScrollToTop />
 
       <main className='flex-1'>
         <Routes>
@@ -21,7 +23,7 @@ function App() {
           <Route path='/departments' element={<Departments />} />
           <Route path='/departments/:departmentId' element={<DepartmentDetails />} />
           <Route path='/deans-hods' element={<DeansHODs />} />
-          <Route path="/help&faq" element={<HelpFAQ />} />
+          <Route path='/help&faq' element={<HelpFAQ />} />
           <Route path='/about' element={<About />} />
         </Routes>
       </main>
