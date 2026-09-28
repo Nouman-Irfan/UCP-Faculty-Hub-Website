@@ -29,7 +29,7 @@ const Offices = () => {
 
                         <p className="mt-4 max-w-2xl leading-7 text-slate-600">
                             {selected
-                                ? `Explore administrative offices and important locations inside ${selected.name}.`
+                                ? `Explore faculty offices and important locations inside ${selected.name}.`
                                 : 'Find important administrative offices and their locations across the University of Central Punjab.'}
                         </p>
 
