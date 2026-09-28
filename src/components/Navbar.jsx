@@ -1,20 +1,16 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router'
 import { motion } from 'motion/react'
+import OfficesDropdown from './OfficesDropdown'
 
 const Navbar = () => {
-
-  const navClass = ({ isActive }) => {
-    if (isActive) {
-      return 'border-b-2 border-blue-700 py-3 text-sm font-semibold text-blue-700'
-    }
-
-    return 'border-b-2 border-transparent py-3 text-sm font-semibold text-slate-700 transition hover:text-blue-700'
-  }
+  const navClass = ({ isActive }) =>
+    isActive
+      ? 'border-b-2 border-blue-700 py-3 text-sm font-semibold text-blue-700'
+      : 'border-b-2 border-transparent py-3 text-sm font-semibold text-slate-700 transition hover:text-blue-700'
 
   return (
     <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }} className="sticky top-0 z-50 w-full bg-white shadow-sm">
-
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         <Link to="/">
@@ -39,6 +35,8 @@ const Navbar = () => {
             <NavLink to="/deans-hods" className={navClass}>Deans & HODs</NavLink>
           </motion.li>
 
+          <OfficesDropdown navClass={navClass} />
+
           <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} whileHover={{ y: -2 }}>
             <NavLink to="/help&faq" className={navClass}>Help & FAQ</NavLink>
           </motion.li>
@@ -56,7 +54,6 @@ const Navbar = () => {
         </motion.div>
 
       </div>
-
     </motion.nav>
   )
 }
