@@ -89,7 +89,7 @@ export const offices = [
         office: 'D-Building',
         building: 'D-Building',
         section: '2nd-floor',
-        location: 'FOIT Section 2nd Floor',
+        location: 'Table no. 4 - FOIT Section 2nd Floor',
         image: 'https://ucp.edu.pk/wp-content/uploads/2024/05/ayesha-nadeem.png'
     },
     {
@@ -136,5 +136,68 @@ export const offices = [
         section: '2nd-floor',
         location: '2nd Floor - Faculty Office F-202',
         image: 'https://ucp.edu.pk/wp-content/uploads/2019/01/Hina-Tahir-Lecturer.png'
+    },
+    {
+        name: 'Asna Abroo',
+        role: 'Lab Instructor',
+        office: 'D-Building',
+        building: 'D-Building',
+        section: '2nd-floor',
+        location: 'Table no. 4 - FOIT Section 2nd Floor',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2025/10/Asna-Abroo.jpeg'
+    },
+    {
+        name: 'Dr.Muhammad Aslam Javed',
+        role: 'Assistant Professor',
+        office: 'D-Building',
+        building: 'D-Building',
+        section: '1st-floor',
+        location: '1st Floor - Office 1-001',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2022/09/Aslam-Javed.jpg'
+    },
+    {
+        name: 'Dr.Junaid Ahmed',
+        role: 'Assistant Professor',
+        office: 'D-Building',
+        building: 'D-Building',
+        section: '1st-floor',
+        location: '1st Floor - Office 1-002',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2019/01/junaid.jpg'
+    },
+    {
+        name: 'Dr.Amal Majid',
+        role: 'Assistant Professor',
+        office: 'D-Building',
+        building: 'D-Building',
+        section: '1st-floor',
+        location: '1st Floor - Office 1-006',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2022/04/Dr.-Amal-Majid-FOS.jpg'
+    },
+    {
+        name: 'Dr.Syed Zulqadar Hassan',
+        role: 'Associate Professor',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: '2nd-floor',
+        location: '2nd Floor - Cabin no. 40',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2024/10/Dr.-Syed-Zulqadar-Hassan.jpg'
+    },
+    {
+        name: 'Muhammad Zulkifl Hasan ',
+        role: 'Principal Lecturer',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: '2nd-floor',
+        location: '2nd Floor - Cabin no. 33',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2022/10/Muhammad-Zulkifl-Hasan.jpg'
+    },
+    {
+        name: 'Eugene Gabriel John',
+        role: 'Marketing Manager',
+        office: 'Takhleeq',
+        building: 'Takhleeq',
+        section: 'ground-floor',
+        location: 'Ground Floor',
+        image: '/assets/offices/Eugene-Gabriel-John.png'
     }
 ]
