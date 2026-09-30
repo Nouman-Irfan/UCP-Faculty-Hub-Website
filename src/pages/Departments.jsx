@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSearchParams } from 'react-router'
 import facultyData from '../data/facultyData'
 import DepartmentCard from '../components/DepartmentCard'
 import DepartmentSearch from '../components/DepartmentSearch'
@@ -6,7 +7,12 @@ import { motion } from 'motion/react'
 
 const Departments = () => {
   const [search, setSearch] = useState('')
+  const [searchParams] = useSearchParams()
+  const selectedFaculty = searchParams.get('faculty')
   const departments = []
+
+  const normalizeFaculty = (name) =>
+    name.toLowerCase().replaceAll('&', 'and').replace(/\s+/g, ' ').trim()
 
   facultyData.forEach((person) => {
     const departmentExists = departments.some(
@@ -26,10 +32,15 @@ const Departments = () => {
   const filteredDepartments = departments.filter((department) => {
     const searchText = search.toLowerCase()
 
-    return (
+    const matchesSearch =
       department.name.toLowerCase().includes(searchText) ||
       department.faculty.toLowerCase().includes(searchText)
-    )
+
+    const matchesFaculty =
+      !selectedFaculty ||
+      normalizeFaculty(department.faculty) === normalizeFaculty(selectedFaculty)
+
+    return matchesSearch && matchesFaculty
   })
 
   return (
@@ -37,16 +48,19 @@ const Departments = () => {
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
-
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
             <p className="text-sm font-semibold text-blue-700">UCP DEPARTMENTS</p>
-            <h1 className="mt-2 text-4xl font-bold text-slate-900">Explore Departments</h1>
+
+            <h1 className="mt-2 text-4xl font-bold text-slate-900">
+              {selectedFaculty || 'Explore Departments'}
+            </h1>
 
             <p className="mt-4 max-w-2xl leading-7 text-slate-600">
-              Browse academic departments across UCP and explore the faculty connected with each department.
+              {selectedFaculty
+                ? `Explore departments under the ${selectedFaculty}.`
+                : 'Browse academic departments across UCP and explore the faculty connected with each department.'}
             </p>
           </motion.div>
-
         </div>
       </section>
 
@@ -56,7 +70,9 @@ const Departments = () => {
 
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25, ease: 'easeOut' }} className="mb-7">
           <h2 className="text-2xl font-bold text-slate-900">Department Directory</h2>
-          <p className="mt-1 text-sm text-slate-500">Showing {filteredDepartments.length} departments</p>
+          <p className="mt-1 text-sm text-slate-500">
+            Showing {filteredDepartments.length} departments
+          </p>
         </motion.div>
 
         {filteredDepartments.length > 0 ? (

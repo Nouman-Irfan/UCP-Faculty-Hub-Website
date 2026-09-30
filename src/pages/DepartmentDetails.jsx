@@ -3,13 +3,13 @@ import { Link, useParams } from 'react-router'
 import facultyData from '../data/facultyData'
 import FacultyCard from '../components/FacultyCard'
 import FacultyModal from '../components/FacultyModal'
+import Counter from '../components/Counter'
 import { motion } from 'motion/react'
 
 const DepartmentDetails = () => {
   const { departmentId } = useParams()
   const [selectedPerson, setSelectedPerson] = useState(null)
   const departmentPeople = facultyData.filter((person) => person.departmentId === departmentId)
-
   if (departmentPeople.length === 0) {
     return (
       <main className="bg-slate-50">
@@ -25,11 +25,9 @@ const DepartmentDetails = () => {
       </main>
     )
   }
-
   const department = departmentPeople[0]
   const researchCount = departmentPeople.filter((person) => person.researchInterests && person.researchInterests.length > 0).length
   const departmentImage = `/assets/department-badges/${departmentId}.png`
-
   return (
     <main className="bg-slate-50">
       <section className="mx-auto max-w-6xl px-6 py-10">
@@ -55,13 +53,17 @@ const DepartmentDetails = () => {
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="rounded-2xl border border-slate-200 bg-blue-50 p-6">
             <p className="text-sm font-semibold text-blue-700">DIRECTORY</p>
-            <p className="mt-3 text-4xl font-bold text-slate-900">{departmentPeople.length}</p>
+            <p className="mt-3 text-4xl font-bold text-slate-900">
+              <Counter value={departmentPeople.length} />
+            </p>
             <p className="mt-2 text-sm text-slate-600">Directory Records</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.27 }} className="rounded-2xl border border-slate-200 bg-white p-6">
             <p className="text-sm font-semibold text-slate-500">RESEARCH</p>
-            <p className="mt-3 text-4xl font-bold text-blue-700">{researchCount}</p>
+            <p className="mt-3 text-4xl font-bold text-blue-700">
+              <Counter value={researchCount} />
+            </p>
             <p className="mt-2 text-sm text-slate-600">Profiles with Research Interests</p>
           </motion.div>
 
