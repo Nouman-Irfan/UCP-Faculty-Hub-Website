@@ -64,7 +64,7 @@ const Faculty = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
             {filteredFaculty.map((person) => (
-              <motion.div key={person.id} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.4, ease: 'easeOut' }} whileHover={{ y: -4 }}>
+              <motion.div key={person.id} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.4, ease: 'easeOut' }} className="h-full">
                 <FacultyCard person={person} onViewProfile={setSelectedPerson} />
               </motion.div>
             ))}
