@@ -8,6 +8,7 @@ const Footer = () => {
     ['Faculty', '/faculty'],
     ['Departments', '/departments'],
     ['Deans & HODs', '/deans-hods'],
+    ['Offices', '/offices'],
     ['FAQ', '/help&faq'],
     ['About', '/about']
   ]
