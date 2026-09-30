@@ -108,7 +108,7 @@ export const offices = [
         building: 'Gym-Building',
         section: 'dsa-office',
         location: '1st Floor DSA Office',
-        image: 'https://tse2.mm.bing.net/th/id/OIP.96SPvku_1J2wkrLhcW5PQAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'
+        image: '/assets/offices/shumail-khan.jpg'
     },
     {
         name: 'Zukhruf Shaukat',
@@ -199,5 +199,113 @@ export const offices = [
         section: 'ground-floor',
         location: 'Ground Floor',
         image: '/assets/offices/Eugene-Gabriel-John.png'
+    },
+    {
+        name: 'Dr.Nabeel Sabir',
+        role: 'Associate Professor',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F304 - Cabin no. 8',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2023/05/Dr.-Nabeel-Sabir-2.png'
+    },
+    {
+        name: 'Abid Bashir',
+        role: 'Principal Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F304 - Cabin no. 1',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2023/05/Abid-Bashir.png'
+    },
+    {
+        name: 'Amna Mahmood',
+        role: 'Principal Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F304 - Cabin no. 6',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2019/10/Ms.-Amna-Mahmood_ucp_fos.jpg'
+    },
+    {
+        name: 'Sidra Noureen',
+        role: 'Principal Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F304 - Cabin no. 6',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2023/05/Sidra-Noureen.png'
+    },
+    {
+        name: 'Malik Junaid Aziz',
+        role: 'Senior Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F301 - Cabin no. 2',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2023/05/Malik-Junaid-Aziz.jpg'
+    },
+    {
+        name: 'Ahsan Azhar',
+        role: 'Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F301 - Cabin no. 2',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2021/11/Ahsan-Azhar1.jpg'
+    },
+    {
+        name: 'Prof. Dr.Imtiaz Majeed',
+        role: 'Sectional Head Pharmaceutics',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F301 - Cabin no. 1',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2017/05/imtiyaaz.jpg'
+    },
+    {
+        name: 'Tooba Mehboob',
+        role: 'Principal Lecturer',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '3rd-floor',
+        location: '3rd Floor - F301 - Cabin no. 5',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2017/11/Tooba-255x255-1.jpg'
+    },
+    {
+        name: 'Faryal Yusuf',
+        role: 'Assistant Manager Department of Student Affairs',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: 'dsa-office',
+        location: '1st Floor DSA Office',
+        image: '/assets/offices/faryal-yusuf.jpeg'
+    },
+    {
+        name: 'Abdul Hannan',
+        role: 'Assistant Manager Department of Student Affairs',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: 'dsa-office',
+        location: '1st Floor DSA Office',
+        image: '/assets/offices/abdul-hannan.jpeg'
+    },
+    {
+        name: 'Ms. Aroosa Khan',
+        role: 'Deputy Manager Department of Student Affairs',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: 'dsa-office',
+        location: '1st Floor DSA Office',
+        image: '/assets/offices/aroosa-khan.jpg'
+    },
+    {
+        name: 'Syed Muhammad Daud',
+        role: 'Deputy Manager Department of Student Affairs',
+        office: 'Gym-Building',
+        building: 'Gym-Building',
+        section: 'dsa-office',
+        location: '1st Floor DSA Office',
+        image: '/assets/offices/daud.jpeg'
     }
 ]
