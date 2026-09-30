@@ -36,7 +36,7 @@ const OfficesDropdown = ({ navClass }) => {
           <Link to="/offices/c-building" className={linkClass}>C-Building <span>›</span></Link>
 
           <div className={`${subMenu} group-hover/c:visible group-hover/c:translate-x-0 group-hover/c:opacity-100`}>
-            <Link to="/offices/c-building/1st-floor" className={linkClass}>1st Floor</Link>
+            <Link to="/offices/c-building/3rd-floor" className={linkClass}>3rd Floor</Link>
             <Link to="/offices/c-building/international-hub" className={linkClass}>UCP International Hub</Link>
           </div>
         </div>

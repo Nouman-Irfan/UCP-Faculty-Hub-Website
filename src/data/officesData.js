@@ -307,5 +307,23 @@ export const offices = [
         section: 'dsa-office',
         location: '1st Floor DSA Office',
         image: '/assets/offices/daud.jpeg'
+    },
+    {
+        name: 'Prof. Dr. Barkat Ali',
+        role: 'Professor',
+        office: 'C-Building',
+        building: 'C-Building',
+        section: '3rd-floor',
+        location: 'Faculty Chambers - 3rd Floor',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2024/06/Prof.-Dr.-Barkat-Ali.webp'
+    },
+    {
+        name: 'Muhammad Aamer Kamran',
+        role: 'Assistant Professor',
+        office: 'C-Building',
+        building: 'C-Building',
+        section: '3rd-floor',
+        location: 'Faculty Chambers - 3rd Floor',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2022/04/Muhammad-Aamer-Kamran.png'
     }
 ]
