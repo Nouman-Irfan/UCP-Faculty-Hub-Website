@@ -28,7 +28,10 @@ const PopularDepartments = () => {
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Explore Computer Science faculty members and available academic information.
           </p>
-          <Link to="/departments" className="mt-4 inline-block text-sm font-semibold text-blue-700">
+          <Link
+            to="/departments/faculty-of-information-technology-and-computer-science-computer-science"
+            className="mt-4 inline-block text-sm font-semibold text-blue-700"
+          >
             Explore Department →
           </Link>
         </motion.div>
@@ -39,7 +42,10 @@ const PopularDepartments = () => {
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Discover Software Engineering faculty and department information.
           </p>
-          <Link to="/departments" className="mt-4 inline-block text-sm font-semibold text-blue-700">
+          <Link
+            to="/departments/faculty-of-information-technology-and-computer-science-software-engineering"
+            className="mt-4 inline-block text-sm font-semibold text-blue-700"
+          >
             Explore Department →
           </Link>
         </motion.div>
@@ -50,7 +56,10 @@ const PopularDepartments = () => {
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Explore Accounting and Finance faculty and department information.
           </p>
-          <Link to="/departments" className="mt-4 inline-block text-sm font-semibold text-blue-700">
+          <Link
+            to="/departments/faculty-of-management-sciences-accounting-finance"
+            className="mt-4 inline-block text-sm font-semibold text-blue-700"
+          >
             Explore Department →
           </Link>
         </motion.div>
