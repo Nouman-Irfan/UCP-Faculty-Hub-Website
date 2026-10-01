@@ -61,6 +61,10 @@ const Navbar = () => {
             {officesOpen && (
               <div className="ml-3 space-y-1 border-l-2 border-blue-100 pl-3">
 
+                <NavLink to="/offices" className={mobileClass} onClick={closeMenu}>
+                  Administrative Offices
+                </NavLink>
+
                 <details>
                   <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
                     A-Building
