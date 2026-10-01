@@ -35,33 +35,33 @@ const HelpFAQ = () => {
     <main className="bg-white">
 
       <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-5xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 sm:py-16">
 
-          <motion.div initial={{ opacity: 0, y: -15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center gap-3">
-            <motion.div initial={{ width: 0 }} animate={{ width: 40 }} transition={{ duration: 0.6, delay: 0.2 }} className="h-px bg-amber-400" />
-            <p className="text-sm font-semibold tracking-widest text-blue-700">HELP CENTER</p>
-            <motion.div initial={{ width: 0 }} animate={{ width: 40 }} transition={{ duration: 0.6, delay: 0.2 }} className="h-px bg-amber-400" />
+          <motion.div initial={{ opacity: 0, y: -15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex items-center justify-center gap-2 sm:gap-3">
+            <motion.div initial={{ width: 0 }} animate={{ width: 40 }} transition={{ duration: 0.6, delay: 0.2 }} className="h-px max-w-7 bg-amber-400 sm:max-w-10" />
+            <p className="text-xs font-semibold tracking-widest text-blue-700 sm:text-sm">HELP CENTER</p>
+            <motion.div initial={{ width: 0 }} animate={{ width: 40 }} transition={{ duration: 0.6, delay: 0.2 }} className="h-px max-w-7 bg-amber-400 sm:max-w-10" />
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">
+          <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }} className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
             Frequently Asked Questions
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">
             Find quick answers to common questions about the UCP Faculty Hub and how to use the platform.
           </motion.p>
 
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-16">
+      <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
 
-        <motion.div initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-8">
-          <p className="text-sm font-semibold text-blue-700">COMMON QUESTIONS</p>
-          <h2 className="mt-2 text-2xl font-bold text-slate-900">How can we help?</h2>
+        <motion.div initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-6 sm:mb-8">
+          <p className="text-xs font-semibold text-blue-700 sm:text-sm">COMMON QUESTIONS</p>
+          <h2 className="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">How can we help?</h2>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem
               key={faq.question}
