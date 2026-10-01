@@ -1,7 +1,32 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import { offices } from '../data/officesData'
 
 const FacultyCard = ({ person, onViewProfile }) => {
+  const cleanName = (name) =>
+    name
+      .toLowerCase()
+      .replace(/\b(dr|prof|mr|ms)\b/g, '')
+      .replace(/[^a-z0-9]/g, '')
+      .trim()
+
+  const officeInfo = offices.find((office) => {
+    const sameImage =
+      office.image &&
+      person.image &&
+      office.image === person.image
+
+    const officeName = cleanName(office.name)
+    const personName = cleanName(person.name)
+
+    const sameName =
+      officeName === personName ||
+      officeName.includes(personName) ||
+      personName.includes(officeName)
+
+    return sameImage || sameName
+  })
+
   return (
     <motion.div className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
 
@@ -23,6 +48,18 @@ const FacultyCard = ({ person, onViewProfile }) => {
         <p className="mt-1 text-sm font-medium text-blue-700">{person.designation}</p>
         <p className="mt-3 text-sm text-slate-600">{person.department}</p>
         <p className="mt-1 text-xs leading-5 text-slate-500">{person.faculty}</p>
+
+        <div className="mt-3 text-sm text-slate-600">
+          <p>
+            <span className="font-semibold">Location:</span>{' '}
+            {officeInfo?.location || 'Null'}
+          </p>
+
+          <p>
+            <span className="font-semibold">Building:</span>{' '}
+            {officeInfo?.building || 'Null'}
+          </p>
+        </div>
 
         <motion.button
           whileHover={{ scale: 1.015 }}

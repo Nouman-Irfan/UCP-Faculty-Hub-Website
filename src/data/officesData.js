@@ -362,7 +362,7 @@ export const offices = [
         location: 'Faculty Office - 3rd Floor',
         image: 'https://ucp.edu.pk/wp-content/uploads/2021/02/Zukhruf-Shaukat.webp'
     },
-     {
+    {
         name: 'Ms. Anum Akbar',
         role: 'Head Career Service Office (CSO)',
         office: 'D-Building',
