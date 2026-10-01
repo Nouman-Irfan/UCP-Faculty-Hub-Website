@@ -1,59 +1,85 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router'
 import { motion } from 'motion/react'
 import OfficesDropdown from './OfficesDropdown'
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [officesOpen, setOfficesOpen] = useState(false)
+
   const navClass = ({ isActive }) =>
     isActive
       ? 'border-b-2 border-blue-700 py-3 text-sm font-semibold text-blue-700'
       : 'border-b-2 border-transparent py-3 text-sm font-semibold text-slate-700 transition hover:text-blue-700'
 
-  return (
-    <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }} className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+  const mobileClass = ({ isActive }) =>
+    `block rounded-lg px-4 py-3 text-sm font-semibold ${isActive ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50 hover:text-blue-700'}`
 
-        <Link to="/">
-          <img src="/assets/branding/ucp-faculty-hub-logo.png" alt="UCP Faculty Hub Logo" className="h-14 w-auto" />
+  const closeMenu = () => {
+    setMenuOpen(false)
+    setOfficesOpen(false)
+  }
+
+  return (
+    <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:py-4">
+        <Link to="/" onClick={closeMenu}>
+          <img src="/assets/branding/ucp-faculty-hub-logo.png" alt="UCP Faculty Hub Logo" className="h-11 w-auto sm:h-14" />
         </Link>
 
-        <ul className="flex items-center gap-8">
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} whileHover={{ y: -2 }}>
-            <NavLink to="/" end className={navClass}>Home</NavLink>
-          </motion.li>
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} whileHover={{ y: -2 }}>
-            <NavLink to="/faculty" className={navClass}>Faculty</NavLink>
-          </motion.li>
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} whileHover={{ y: -2 }}>
-            <NavLink to="/departments" className={navClass}>Departments</NavLink>
-          </motion.li>
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} whileHover={{ y: -2 }}>
-            <NavLink to="/deans-hods" className={navClass}>Deans & HODs</NavLink>
-          </motion.li>
-
+        <ul className="hidden items-center gap-8 lg:flex">
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/" end className={navClass}>Home</NavLink></motion.li>
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/faculty" className={navClass}>Faculty</NavLink></motion.li>
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/departments" className={navClass}>Departments</NavLink></motion.li>
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/deans-hods" className={navClass}>Deans & HODs</NavLink></motion.li>
           <OfficesDropdown navClass={navClass} />
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} whileHover={{ y: -2 }}>
-            <NavLink to="/help&faq" className={navClass}>Help & FAQ</NavLink>
-          </motion.li>
-
-          <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} whileHover={{ y: -2 }}>
-            <NavLink to="/about" className={navClass}>About</NavLink>
-          </motion.li>
-
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/help&faq" className={navClass}>Help & FAQ</NavLink></motion.li>
+          <motion.li whileHover={{ y: -2 }}><NavLink to="/about" className={navClass}>About</NavLink></motion.li>
         </ul>
 
-        <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: 0.96 }}>
-          <Link to="/faculty" className="block rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 hover:shadow-md">
-            Browse Directory →
-          </Link>
+        <motion.div whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: 0.96 }} className="hidden lg:block">
+          <Link to="/faculty" className="block rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800">Browse Directory →</Link>
         </motion.div>
 
+        <button onClick={() => setMenuOpen(!menuOpen)} className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-2xl text-slate-700 lg:hidden" aria-label="Toggle menu">
+          {menuOpen ? '×' : '☰'}
+        </button>
       </div>
+
+      {menuOpen && (
+        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden">
+          <div className="mx-auto max-w-7xl space-y-1">
+            <NavLink to="/" end className={mobileClass} onClick={closeMenu}>Home</NavLink>
+            <NavLink to="/faculty" className={mobileClass} onClick={closeMenu}>Faculty</NavLink>
+            <NavLink to="/departments" className={mobileClass} onClick={closeMenu}>Departments</NavLink>
+            <NavLink to="/deans-hods" className={mobileClass} onClick={closeMenu}>Deans & HODs</NavLink>
+
+            <button onClick={() => setOfficesOpen(!officesOpen)} className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+              Offices <span>{officesOpen ? '−' : '+'}</span>
+            </button>
+
+            {officesOpen && (
+              <div className="ml-4 border-l-2 border-blue-100 pl-3">
+                {[
+                  ['/offices', 'All Offices'],
+                  ['/offices/a-building', 'A-Building'],
+                  ['/offices/b-building', 'B-Building'],
+                  ['/offices/c-building', 'C-Building'],
+                  ['/offices/d-building', 'D-Building'],
+                  ['/offices/takhleeq-building', 'Takhleeq'],
+                  ['/offices/gym-building', 'Gym-Building']
+                ].map(([to, label]) => (
+                  <NavLink key={to} to={to} className={mobileClass} onClick={closeMenu}>{label}</NavLink>
+                ))}
+              </div>
+            )}
+
+            <NavLink to="/help&faq" className={mobileClass} onClick={closeMenu}>Help & FAQ</NavLink>
+            <NavLink to="/about" className={mobileClass} onClick={closeMenu}>About</NavLink>
+            <Link to="/faculty" onClick={closeMenu} className="mt-3 block rounded-lg bg-blue-700 px-4 py-3 text-center text-sm font-semibold text-white">Browse Directory →</Link>
+          </div>
+        </motion.div>
+      )}
     </motion.nav>
   )
 }
