@@ -29,6 +29,7 @@ const OfficesDropdown = ({ navClass }) => {
 
           <div className={`${subMenu} group-hover/b:visible group-hover/b:translate-x-0 group-hover/b:opacity-100`}>
             <Link to="/offices/b-building/ground-floor" className={linkClass}>Ground Floor</Link>
+             <Link to="/offices/b-building/3rd-floor" className={linkClass}>3rd Floor</Link>
           </div>
         </div>
 
@@ -47,6 +48,7 @@ const OfficesDropdown = ({ navClass }) => {
           <div className={`${subMenu} group-hover/d:visible group-hover/d:translate-x-0 group-hover/d:opacity-100`}>
             <Link to="/offices/d-building/1st-floor" className={linkClass}>1st Floor</Link>
             <Link to="/offices/d-building/2nd-floor" className={linkClass}>2nd Floor</Link>
+             <Link to="/offices/d-building/cso-office" className={linkClass}>CSO Office</Link>
           </div>
         </div>
 

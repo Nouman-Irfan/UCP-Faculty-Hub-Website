@@ -111,15 +111,6 @@ export const offices = [
         image: '/assets/offices/shumail-khan.jpg'
     },
     {
-        name: 'Zukhruf Shaukat',
-        role: 'Lecturer',
-        office: 'D-Building',
-        building: 'D-Building',
-        section: '2nd-floor',
-        location: '2nd Floor',
-        image: 'https://ucp.edu.pk/wp-content/uploads/2021/02/Zukhruf-Shaukat.webp'
-    },
-    {
         name: 'Sikander Sethi',
         role: 'Director International Office',
         office: 'C-Building',
@@ -325,5 +316,59 @@ export const offices = [
         section: '3rd-floor',
         location: 'Faculty Chambers - 3rd Floor',
         image: 'https://ucp.edu.pk/wp-content/uploads/2022/04/Muhammad-Aamer-Kamran.png'
+    },
+    {
+        name: 'Dr. Kafeel Ahmad',
+        role: 'DEAN - Faculty of Engineering',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '1st-floor',
+        location: '1st Floor - F103 - Cabin no. 7',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2026/09/Dr-kafeel-ahmad-dean.webp'
+    },
+    {
+        name: 'Dr. Muhammad Babur',
+        role: 'HOD Civil Engineering Department',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '1st-floor',
+        location: '1st Floor - F103 - Cabin no. 4',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2017/06/Dr-Babur-255x255.jpg'
+    },
+    {
+        name: 'Dr. Fesal Toosy',
+        role: 'HOD Electrical Engineering Department',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '1st-floor',
+        location: '1st Floor - F103 - Cabin no. 5',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2017/05/Untitled-1-copy.jpg'
+    },
+    {
+        name: 'Dr. Muhammad Rizwan Shad',
+        role: 'HOD Mechanical Engineering Department',
+        office: 'A-Building',
+        building: 'A-Building',
+        section: '1st-floor',
+        location: '1st Floor - F103 - Cabin no. 6',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2017/05/dr-rizwan-dean-foee-copy.webp'
+    },
+    {
+        name: 'Zukhruf Shaukat',
+        role: 'Lecturer',
+        office: 'B-Building',
+        building: 'B-Building',
+        section: '3rd-floor',
+        location: 'Faculty Office - 3rd Floor',
+        image: 'https://ucp.edu.pk/wp-content/uploads/2021/02/Zukhruf-Shaukat.webp'
+    },
+     {
+        name: 'Ms. Anum Akbar',
+        role: 'Head Career Service Office (CSO)',
+        office: 'D-Building',
+        building: 'D-Building',
+        section: 'cso-office',
+        location: 'CSO Section - 3rd Floor ',
+        image: '/assets/offices/anum-akbar.png'
     }
 ]
