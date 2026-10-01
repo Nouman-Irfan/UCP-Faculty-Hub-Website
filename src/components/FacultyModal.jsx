@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { offices } from '../data/officesData'
 
 const FacultyModal = ({ person, onClose }) => {
   useEffect(() => {
@@ -6,7 +7,6 @@ const FacultyModal = ({ person, onClose }) => {
 
     const bodyOverflow = document.body.style.overflow
     const htmlOverflow = document.documentElement.style.overflow
-
     document.body.style.overflow = 'hidden'
     document.documentElement.style.overflow = 'hidden'
 
@@ -18,6 +18,17 @@ const FacultyModal = ({ person, onClose }) => {
 
   if (!person) return null
 
+  const cleanName = (name) =>
+    name.toLowerCase().replace(/\b(dr|prof|mr|ms)\b/g, '').replace(/[^a-z0-9]/g, '')
+
+  const officeInfo = offices.find((office) => {
+    const sameImage = office.image && person.image && office.image === person.image
+    const officeName = cleanName(office.name)
+    const personName = cleanName(person.name)
+    return sameImage || officeName === personName ||
+      officeName.includes(personName) || personName.includes(officeName)
+  })
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50 px-4" onWheel={(e) => e.preventDefault()}>
       <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto overscroll-contain rounded-xl bg-white shadow-xl" onWheel={(e) => e.stopPropagation()}>
@@ -28,12 +39,7 @@ const FacultyModal = ({ person, onClose }) => {
 
         <div className="grid gap-8 px-8 pb-8 md:grid-cols-[220px_1fr]">
           <div className="flex h-64 items-center justify-center rounded-lg bg-slate-100 p-3">
-            <img
-              src={person.image || "/assets/placeholders/faculty-placeholder.png"}
-              alt={person.name}
-              className="h-full w-full object-contain"
-              onError={(e) => e.currentTarget.src = "/assets/placeholders/faculty-placeholder.png"}
-            />
+            <img src={person.image || "/assets/placeholders/faculty-placeholder.png"} alt={person.name} className="h-full w-full object-contain" onError={(e) => e.currentTarget.src = "/assets/placeholders/faculty-placeholder.png"} />
           </div>
 
           <div>
@@ -55,6 +61,13 @@ const FacultyModal = ({ person, onClose }) => {
                 <p className="mt-1 text-sm text-slate-600">{person.officeExtension}</p>
               </div>
             )}
+
+            <div className="mt-4">
+              <p className="text-sm font-semibold text-slate-900">Office Location</p>
+              <p className="mt-1 text-sm text-slate-600">
+                {officeInfo ? `${officeInfo.location}, ${officeInfo.building}` : 'Null'}
+              </p>
+            </div>
 
             {person.education?.length > 0 && (
               <div className="mt-6">
@@ -89,7 +102,6 @@ const FacultyModal = ({ person, onClose }) => {
             )}
           </div>
         </div>
-
       </div>
     </div>
   )
