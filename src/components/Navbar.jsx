@@ -59,18 +59,70 @@ const Navbar = () => {
             </button>
 
             {officesOpen && (
-              <div className="ml-4 border-l-2 border-blue-100 pl-3">
-                {[
-                  ['/offices', 'All Offices'],
-                  ['/offices/a-building', 'A-Building'],
-                  ['/offices/b-building', 'B-Building'],
-                  ['/offices/c-building', 'C-Building'],
-                  ['/offices/d-building', 'D-Building'],
-                  ['/offices/takhleeq-building', 'Takhleeq'],
-                  ['/offices/gym-building', 'Gym-Building']
-                ].map(([to, label]) => (
-                  <NavLink key={to} to={to} className={mobileClass} onClick={closeMenu}>{label}</NavLink>
-                ))}
+              <div className="ml-3 space-y-1 border-l-2 border-blue-100 pl-3">
+
+                <details>
+                  <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                    A-Building
+                  </summary>
+                  <div className="ml-3">
+                    <NavLink to="/offices/a-building" className={mobileClass} onClick={closeMenu}>All A-Building</NavLink>
+                    <NavLink to="/offices/a-building/1st-floor" className={mobileClass} onClick={closeMenu}>1st Floor</NavLink>
+                    <NavLink to="/offices/a-building/2nd-floor" className={mobileClass} onClick={closeMenu}>2nd Floor</NavLink>
+                    <NavLink to="/offices/a-building/3rd-floor" className={mobileClass} onClick={closeMenu}>3rd Floor</NavLink>
+                    <NavLink to="/offices/a-building/ssc-office" className={mobileClass} onClick={closeMenu}>SSC Office</NavLink>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                    B-Building
+                  </summary>
+                  <div className="ml-3">
+                    <NavLink to="/offices/b-building" className={mobileClass} onClick={closeMenu}>All B-Building</NavLink>
+                    <NavLink to="/offices/b-building/ground-floor" className={mobileClass} onClick={closeMenu}>Ground Floor</NavLink>
+                    <NavLink to="/offices/b-building/3rd-floor" className={mobileClass} onClick={closeMenu}>3rd Floor</NavLink>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                    C-Building
+                  </summary>
+                  <div className="ml-3">
+                    <NavLink to="/offices/c-building" className={mobileClass} onClick={closeMenu}>All C-Building</NavLink>
+                    <NavLink to="/offices/c-building/3rd-floor" className={mobileClass} onClick={closeMenu}>3rd Floor</NavLink>
+                    <NavLink to="/offices/c-building/international-hub" className={mobileClass} onClick={closeMenu}>International Hub</NavLink>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                    D-Building
+                  </summary>
+                  <div className="ml-3">
+                    <NavLink to="/offices/d-building" className={mobileClass} onClick={closeMenu}>All D-Building</NavLink>
+                    <NavLink to="/offices/d-building/1st-floor" className={mobileClass} onClick={closeMenu}>1st Floor</NavLink>
+                    <NavLink to="/offices/d-building/2nd-floor" className={mobileClass} onClick={closeMenu}>2nd Floor</NavLink>
+                    <NavLink to="/offices/d-building/cso-office" className={mobileClass} onClick={closeMenu}>CSO Office</NavLink>
+                  </div>
+                </details>
+
+                <NavLink to="/offices/takhleeq-building" className={mobileClass} onClick={closeMenu}>
+                  Takhleeq
+                </NavLink>
+
+                <details>
+                  <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                    Gym-Building
+                  </summary>
+                  <div className="ml-3">
+                    <NavLink to="/offices/gym-building" className={mobileClass} onClick={closeMenu}>All Gym-Building</NavLink>
+                    <NavLink to="/offices/gym-building/2nd-floor" className={mobileClass} onClick={closeMenu}>2nd Floor</NavLink>
+                    <NavLink to="/offices/gym-building/dsa-office" className={mobileClass} onClick={closeMenu}>DSA Office</NavLink>
+                  </div>
+                </details>
+
               </div>
             )}
 
